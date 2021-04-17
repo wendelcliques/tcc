@@ -8,14 +8,14 @@ import Color from '../../../styles/Colors'
 
 const EntryListItem = ({entry,onEntryPress}) => {
     return (
-        <View>
+        
             <TouchableOpacity
             onPress={() => {
                 onEntryPress && onEntryPress(entry);
             }}>
             <Text>{entry.termo1}</Text>
             </TouchableOpacity>            
-        </View>
+      
     )
 }
 

@@ -7,6 +7,8 @@ import { FlatList,
     TouchableWithoutFeedback,
     View, Text } from 'react-native'
 
+    import EntryList from '../../components/EntryList';
+
     const fontStyles = ["normal", "italic"];
 const fontVariants = [
   undefined,
@@ -65,6 +67,7 @@ const Treinamento = () => {
 
     return (
         <View style={styles.container}>
+          
             <Text
         style={[
           styles.paragraph,
@@ -87,9 +90,11 @@ const Treinamento = () => {
           }
         ]}
       >Treinamento</Text>
-
+ <EntryList />
       <ScrollView>
           <View>
+         
+         
           <CustomPicker
             label="Text Transform"
             data={textTransformations}
@@ -106,7 +111,10 @@ const CustomPicker = ({ label, data, currentIndex, onSelected }) => {
     return (
       <>
         <Text style={styles.title}>{label}</Text>
+      
         <View style={styles.wrapperHorizontal}>
+          
+
           <FlatList
             bounces
             horizontal

@@ -1,19 +1,27 @@
 import {useState, useCallback} from 'react'
-import { useFocusEffect } from 'react-native'
+import { useFocusEffect } from '@react-navigation/native'
 
 import {
     getEntries,
     addEntry,
     updateEntry,
     deleteEntry,
-} from '..'
+} from '../services/Entries';
 
 const useEntries = () => {
-    return (
-        <View>
-            <Text></Text>
-        </View>
-    )
-}
+    const [entries, setEntries] = useState([]);
 
-export default useEntries
+    useFocusEffect(
+        useCallback(() => {
+            const loadEntries = async () => {
+                const data = await getEntries();
+                setEntries(data);
+            };
+            loadEntries();
+
+        }, []),
+    );
+    return [entries, addEntry, updateEntry, deleteEntry];
+};
+
+export default useEntries;
