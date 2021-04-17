@@ -12,6 +12,8 @@ export const getEntries = async () => {
         return {...documentSnapshot.data(), id: documentSnapshot.id};
     });
 
+    console.log('getEntry :: valor: ', JSON.stringify(entries));
+
     return entries;
 };
 
