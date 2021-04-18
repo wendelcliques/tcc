@@ -8,19 +8,19 @@ import Colors from '../../../styles/Colors'
 
 const EntryListItem = ({entry,onEntryPress}) => {
     return ( 
-       
+        
             <TouchableOpacity
             
             onPress={() => {
                 onEntryPress && onEntryPress(entry);
             }}>
-                <View style={styles.container}>
+              
                      <Text style={{
                         fontSize: 20,
                         textAlign: "center",
-                        color: Colors.green,
+                        color: entry.termo1cor,
                 
-                         }}>{entry.termo1}</Text>
+                         }}>{entry.termo1} </Text>
                         <Text 
                         style={{
                          fontSize: 20,
@@ -28,7 +28,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
                             color: Colors.green,
                 
                         }}>Treinamento</Text>
-                </View>
+               
             </TouchableOpacity>  
 
                        
@@ -38,8 +38,8 @@ const EntryListItem = ({entry,onEntryPress}) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: Colors.red,
+       // flex: 1,
+       // backgroundColor: Colors.red,
     },
     
 });

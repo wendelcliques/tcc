@@ -1,16 +1,16 @@
-import React, {useState} from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React, {useState} from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 import EntryList from '../../components/EntryList';
 
-import Colors from '../../styles/Colors'
+import Colors from '../../styles/Colors';
 
-const Treinamento = () => {
+const Treinamento = ({navigation}) => {
 
 const [cor, setCor] = useState("orange");
 
   return (
-    <View >
+    <View style={styles.container}>
       <Text style={{
                 fontSize: 20,
                 //textAlign: "center",
