@@ -9,21 +9,25 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Welcome from './pages/Welcome';
 import Treinamento from './pages/Treinamento';
+import TreinamentoAdm from './pages/TreinamentoAdm';
 import Aventura from './pages/Aventura';
+import AventuraAdm from './pages/AventuraAdm';
 
 const AppScreens = () => {
     // const AppScreens = ({logged}) => {
     return (
         <Stack.Navigator
             screenOptions={{headerShown: false}}
-            initialRouteName={'Welcome'}
+            initialRouteName={'SignIn'}
             //initialRouteName={logged? 'Welcome' : 'SignIn}
             >
             <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="Welcome" component={Welcome} />
             <Stack.Screen name="Treinamento" component={Treinamento} />
+            <Stack.Screen name="TreinamentoAdm" component={TreinamentoAdm} />
             <Stack.Screen name="Aventura" component={Aventura} />
+            <Stack.Screen name="AventuraAdm" component={AventuraAdm} />
 
 
         </Stack.Navigator>
