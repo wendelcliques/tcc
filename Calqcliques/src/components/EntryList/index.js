@@ -16,7 +16,7 @@ const EntryList = () => {
     console.log('EntryList :: entries', JSON.stringify(entries));
 
     return (
-        <View style={styles.container}>
+        
            <FlatList
            data={entries}
            keyExtractor={item => item.id}
@@ -40,12 +40,12 @@ const EntryList = () => {
            )}
            />
               
-        </View>
+        
     )
 }
 const styles = StyleSheet.create({
     container: {
-       // flex: 1,
+       flex: 1,
         //backgroundColor: Colors.red,
     },
     

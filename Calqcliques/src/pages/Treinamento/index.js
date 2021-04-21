@@ -13,7 +13,7 @@ const [cor, setCor] = useState("orange");
     <View style={styles.container}>
       <Text style={{
                 fontSize: 20,
-                //textAlign: "center",
+              
                 color: cor,
                 
               }}>Treinamento</Text>
