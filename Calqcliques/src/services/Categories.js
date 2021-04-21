@@ -41,7 +41,7 @@ export const addCategory = async category => {
     try {
         data = {
             name: category.name,
-            subcategory: subcategory || "",
+            subcategory: category.subcategory || "",
             
         };
 
