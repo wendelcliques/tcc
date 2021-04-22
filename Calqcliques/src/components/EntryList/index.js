@@ -7,15 +7,23 @@ import EntryListItem from './EntryListItem'
 import useEntries from '../../hooks/useEntries'
 
 import Colors from '../../styles/Colors'
+import TermoModal from '../TermoModal'
 
 
 const EntryList = () => {
     const navigation = useNavigation();
     const [entries] = useEntries();
 
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const onClosePress = () => {
+        setModalVisible(false);
+    };
+
     console.log('EntryList :: entries', JSON.stringify(entries));
 
     return (
+        <View>
         
            <FlatList
            data={entries}
@@ -32,15 +40,24 @@ const EntryList = () => {
            <EntryListItem 
             
             entry={item}
-            onEntryPress={ 
-                Alert.alert('clicou')
-            }
+            onEntryPress={ () => {
+                setModalVisible(true);
+            }}
             />
+
+            
             
            )}
            />
+
+           <TermoModal 
+           isVisible={modalVisible}
+           onCancel={onClosePress}
+           entry={entries}
+
+           />
               
-        
+              </View> 
     )
 }
 const styles = StyleSheet.create({

@@ -3,20 +3,18 @@ import { View, Text, StyleSheet } from 'react-native';
 
 import EntryList from '../../components/EntryList';
 
+import TermoModal from '../../components/TermoModal'
+
 import Colors from '../../styles/Colors';
 
 const Treinamento = ({navigation}) => {
 
-const [cor, setCor] = useState("orange");
+
+const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.container}>
-      <Text style={{
-                fontSize: 20,
-              
-                color: cor,
-                
-              }}>Treinamento</Text>
+      
       <EntryList />
     </View>
   )

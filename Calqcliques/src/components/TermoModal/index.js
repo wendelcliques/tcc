@@ -3,22 +3,37 @@ import {
     Modal,
     View,
      Text,
-    StyleSheet } from 'react-native'
+    StyleSheet, 
+    TouchableOpacity} from 'react-native'
 
 import useEntries from '../../hooks/useEntries'
 
 import Colors from '../../styles/Colors'
 
-const TermoModal = ({isVisible}) => {
+const TermoModal = ({entry, isVisible, onCancel}) => {
     const [entries] = useEntries();
+
+    console.log('Termomodal :: entry', JSON.stringify(entries));
     return (
-        <Modal animationType='slide' transparent={true} visible={isVisible}>
+        <Modal animationType='slide' transparent={false} visible={isVisible}>
         <View>
-            <Text></Text>
+            <Text style={styles.modalItemText}>modal{entry.termo1}</Text>
+
+            <TouchableOpacity
+            onPress={onCancel}>
+                <Text >sair {entry.termo1}</Text>
+            </TouchableOpacity>
         </View>
         </Modal>
      
     )
 }
+
+const styles = StyleSheet.create({
+    modalItemText: {
+        fontSize: 22,
+        color: Colors.orange,
+    }
+})
 
 export default TermoModal

@@ -14,7 +14,11 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <View style={styles.container}>
            
            <View >
-               <TouchableOpacity>
+               <TouchableOpacity
+               onPress={() => {
+                   onEntryPress && onEntryPress();
+               }}
+               >
             <Text style={{
                 fontSize:25,
                 color: entry.termo1cor,
