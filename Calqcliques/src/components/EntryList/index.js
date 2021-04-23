@@ -53,7 +53,7 @@ const EntryList = () => {
            <TermoModal 
            isVisible={modalVisible}
            onCancel={onClosePress}
-           entry={entries}
+           entry={entries.termo1definicao}
 
            />
               

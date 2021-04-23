@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { 
     Modal,
     View,
@@ -13,15 +13,17 @@ import Colors from '../../styles/Colors'
 const TermoModal = ({entry, isVisible, onCancel}) => {
     const [entries] = useEntries();
 
-    console.log('Termomodal :: entry', JSON.stringify(entries));
+    const [entry1, setEntry1] = useState(entry);
+
+    console.log('Termomodal :: entry1', (entry));
     return (
         <Modal animationType='slide' transparent={false} visible={isVisible}>
         <View>
-            <Text style={styles.modalItemText}>modal{entry.termo1}</Text>
+            <Text style={styles.modalItemText}>v(t) é a função do volume do cone que será utilizada para calcular a taxa de variação{entry1}</Text>
 
             <TouchableOpacity
             onPress={onCancel}>
-                <Text >sair {entry.termo1}</Text>
+                <Text >sair {entry}</Text>
             </TouchableOpacity>
         </View>
         </Modal>
@@ -32,7 +34,7 @@ const TermoModal = ({entry, isVisible, onCancel}) => {
 const styles = StyleSheet.create({
     modalItemText: {
         fontSize: 22,
-        color: Colors.orange,
+        color: Colors.black,
     }
 })
 
