@@ -6,9 +6,14 @@ import {
     StyleSheet, 
     TouchableOpacity} from 'react-native'
 
+ import Container from '../Container'  
+ 
+ import TermoModalList from './TermoModalList'
+
 import useEntries from '../../hooks/useEntries'
 
 import Colors from '../../styles/Colors'
+import ExplicaList from '../ExplicaT/ExplicaList'
 
 const TermoModal = ({entry, isVisible, onCancel}) => {
     const [entries] = useEntries();
@@ -17,15 +22,19 @@ const TermoModal = ({entry, isVisible, onCancel}) => {
 
     console.log('Termomodal :: entry1', (entry));
     return (
-        <Modal animationType='slide' transparent={false} visible={isVisible}>
+        <Modal animationType='slide' transparent={true} visible={isVisible}>
+        <Container>     
         <View>
-            <Text style={styles.modalItemText}>v(t) é a função do volume do cone que será utilizada para calcular a taxa de variação{entry1}</Text>
+            
+
+            < TermoModalList data={entries} />
 
             <TouchableOpacity
             onPress={onCancel}>
                 <Text >sair {entry}</Text>
             </TouchableOpacity>
         </View>
+        </Container> 
         </Modal>
      
     )

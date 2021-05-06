@@ -5,6 +5,9 @@ import EntryList from '../../components/EntryList';
 
 import TermoModal from '../../components/TermoModal'
 
+import Menu from '../../components/Menu'
+import ExplicaT from '../../components/ExplicaT'
+
 import Colors from '../../styles/Colors';
 
 const Treinamento = ({navigation}) => {
@@ -14,8 +17,9 @@ const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View style={styles.container}>
-      
+      <Menu />
       <EntryList />
+      <ExplicaT />
     </View>
   )
 }
