@@ -7,6 +7,7 @@ import TermoModal from '../../components/TermoModal'
 
 import Menu from '../../components/Menu'
 import ExplicaT from '../../components/ExplicaT'
+import EntrySummary from '../../components/EntrySummary'
 
 import Colors from '../../styles/Colors';
 
@@ -20,6 +21,7 @@ const [modalVisible, setModalVisible] = useState(false);
       <Menu />
       <EntryList />
       <ExplicaT />
+      <EntrySummary />
     </View>
   )
 }
