@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 import { Chart, VerticalAxis, HorizontalAxis, Line } from 'react-native-responsive-linechart'
 
 const EntrySummaryChart = ({data1, data2}) => {
+    const [a, setA] = useState(4);
     return (
         <View>
             <Chart
