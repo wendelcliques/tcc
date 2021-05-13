@@ -20,7 +20,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
                }}
                >
             <Text style={{
-                fontSize:25,
+                fontSize:15,
                 color: entry.termo1cor,
             }}>
                 {entry.termo1}
@@ -30,7 +30,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
            <View >
            <TouchableOpacity>
             <Text style={{
-                fontSize:25,
+                fontSize:15,
                 color: entry.termo2cor,
             }} >
                 {entry.termo2} 
@@ -40,7 +40,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <View >
                 <TouchableOpacity>
             <Text style={{
-                 fontSize:25,
+                 fontSize:15,
                  color: entry.termo3cor,
             }} >
                 {entry.termo3} 
@@ -50,7 +50,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <View >
                 <TouchableOpacity>
             <Text style={{
-                 fontSize:25,
+                 fontSize:15,
                  color: entry.termo4cor,
             }} >
                 {entry.termo4} 
@@ -60,7 +60,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <View >
                 <TouchableOpacity>
             <Text style={{
-                 fontSize:25,
+                 fontSize:15,
                  color: entry.termo5cor,
             }} >
                 {entry.termo5} 
@@ -71,7 +71,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <View >
                 <TouchableOpacity>
             <Text style={{
-                 fontSize:25,
+                 fontSize:15,
                  color: entry.termo6cor,
             }} >
                 {entry.termo6} 
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'blue',
     },
     termo1: {
-        fontSize: 20,
+        fontSize: 5,
      
         color: Colors.black,
 

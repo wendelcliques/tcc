@@ -14,7 +14,7 @@ const EntrySummaryChart = ({data1, data2}) => {
                 padding={{ left: 20, top: 10, bottom: 10, right: 10 }}
             >
                 <VerticalAxis tickValues={[-8, -4, 0, 4, 8, 12, 16, 20]} />
-                <HorizontalAxis tickCount={10} />
+                <HorizontalAxis tickCount={5} />
                 <Line data={data1} smoothing="none" theme={{ stroke: { color: 'red', width: 1}}} />
                 <Line data={data2} smoothing="cubic-spline" theme={{ stroke: { color: 'blue', width: 1}}} />
             </Chart>

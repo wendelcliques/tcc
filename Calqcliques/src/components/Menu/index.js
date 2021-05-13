@@ -12,9 +12,9 @@ const Menu = () => {
         >
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
-            <Svg height="80" width="100" >
+            <Svg height="100" width="100" >
                 <Polygon
-                points="54,0 15,62 95,62"
+                points="54,18 15,62 95,62"
                 stroke="purple"
                 strokeWidth="2"
                 fill="rgba(99, 99, 00, 1.0)"
@@ -32,7 +32,7 @@ const Menu = () => {
                 />
 
 <Polygon
-                points="54,7 24,62 85,62"
+                points="54,0 24,62 85,62"
                 stroke="purple"
                 strokeWidth="2"
                 fill="rgba(00, 00, 99, 0.2)"
