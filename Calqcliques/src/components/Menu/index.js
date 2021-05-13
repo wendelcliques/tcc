@@ -49,7 +49,7 @@ const Menu = () => {
                     fill="rgba(00, 00, 50, 01.0)"
                 />
             </Svg>
-            <EntryList />
+            
             </View>
         </Container>
     )

@@ -22,6 +22,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <Text style={{
                 fontSize:15,
                 color: entry.termo1cor,
+                backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {entry.termo1}
              </Text>
@@ -32,16 +33,21 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <Text style={{
                 fontSize:15,
                 color: entry.termo2cor,
+                backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo2} 
             </Text>
             </TouchableOpacity>
             </View>
             <View >
-                <TouchableOpacity>
+                <TouchableOpacity
+                
+                >
             <Text style={{
                  fontSize:15,
                  color: entry.termo3cor,
+                 backgroundColor: "rgba(80,80,80, 0.5)",
+              
             }} >
                 {entry.termo3} 
             </Text>
@@ -52,6 +58,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <Text style={{
                  fontSize:15,
                  color: entry.termo4cor,
+                 backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo4} 
             </Text>
@@ -62,6 +69,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <Text style={{
                  fontSize:15,
                  color: entry.termo5cor,
+                 backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo5} 
             </Text>
@@ -73,6 +81,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <Text style={{
                  fontSize:15,
                  color: entry.termo6cor,
+                 backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo6} 
             </Text>
@@ -136,18 +145,16 @@ const styles = StyleSheet.create({
         flex: 1,
       flexDirection: 'row',
         //backgroundColor: Colors.red,
+        marginTop: 0,
+        marginBottom: -13,
+        padding:-10,
     },
     details1: {
         flex: 1,
         //flexDirection: "row",
         backgroundColor: 'blue',
     },
-    termo1: {
-        fontSize: 5,
-     
-        color: Colors.black,
-
-         },
+   
     
 });
 
