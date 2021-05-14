@@ -7,7 +7,7 @@ import EntrySummaryChart from './EntrySummaryChart'
 
 
 const EntrySummary = () => {
-    const [xa, setXa] = useState(1.7);
+    const [xa, setXa] = useState(0.1);
     const data1 = [
         {x: xa, y: -20 },
         //{x: -1, y: 0 },
