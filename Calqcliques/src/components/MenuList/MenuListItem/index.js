@@ -1,7 +1,7 @@
 import React from 'react'
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native'
 
-const index = ({legend, 
+const index = ({legenda, 
     onVar1PressAdd, 
     onVar1PressMin, 
     onVar2PressAdd, 
@@ -12,9 +12,17 @@ const index = ({legend,
     onVar4PressMin,
 
 }) => {
+
+    console.log('MenuListItem :: legend', JSON.stringify(legend));
+
     return (
+        
         <View style={styles.container}>
-            <Text>variavel1{legend.var1text}</Text>
+            
+            <View>
+                <Text>variavel1{legenda.var1text}</Text>
+            </View>
+            
         </View>
     )
 }

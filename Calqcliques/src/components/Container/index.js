@@ -6,11 +6,14 @@ import Colors from '../../styles/Colors'
 const Container = ({
     title,
     children,
+    onPressActionButton,
 }) => {
     return (
         <View style={styles.container}>
+            <TouchableOpacity
+            onPress={onPressActionButton}>
             {title && <Text style={styles.title}>{title}</Text>}
-
+            </TouchableOpacity>
             {children}
             
         </View>

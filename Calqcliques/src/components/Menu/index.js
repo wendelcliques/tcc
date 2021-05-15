@@ -4,11 +4,12 @@ import { View, Text, StyleSheet } from 'react-native'
 
 import Container from '../Container'
 import MenuList from '../MenuList'
-
+import EntryList from '../EntryList'                                                                         
 const Menu = () => {
     return (
         <Container
         title="Menu"
+        onPressActionButton={() => {} }
         >
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
@@ -52,6 +53,7 @@ const Menu = () => {
             
           
             <MenuList />
+            <EntryList />
             </View>
            
         </Container>

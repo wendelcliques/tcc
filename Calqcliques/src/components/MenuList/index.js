@@ -8,7 +8,7 @@ import MenuListItem from './MenuListItem'
 const MenuList = () => {
     const legenda = {
         id: 1,
-        var1text: null,
+        var1text: "raio inicial da base (r(t)): ",
         var1num: null,
         var2text: null,
         var2num: null,
@@ -27,7 +27,7 @@ const MenuList = () => {
     const [var4text, setVar4text] = useState(legenda.var4text);
     const [var4num, setVar4num] = useState(legenda.var4num);
 
-    
+    console.log('MenuList :: legenda', JSON.stringify(legenda));
 
     const taxaCone = () => {
         setVar1text("raio inicial da base (r(t)): ");
@@ -41,26 +41,17 @@ const MenuList = () => {
     }
     return (
         <View>
-            <TouchableOpacity
-            onPress={() => {
-                taxaCone();
-            }
-        }>
-                <Text>Taxa de variação do cone</Text>
-            </TouchableOpacity>
+            
+                
             <FlatList
             data={legenda}
             keyExtractor={item => item.id}
             renderItem={({item, index}) => ( 
                 <MenuListItem
 
-                legend={item}
-            onVar1PressAdd={() => setVar1num(var1num + 1)
-
-            }
-            onVar1PressMin={() => setVar1num(var1num - 1)
-
-            }
+                legenda={item}
+            onVar1PressAdd={() => setVar1num(var1num + 1) }
+            onVar1PressMin={() => setVar1num(var1num - 1) }
 
             onVar2PressAdd={() => setVar1num(var2num + 1)
 
