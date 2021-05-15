@@ -3,7 +3,7 @@ import Svg, {Ellipse, Polygon} from 'react-native-svg'
 import { View, Text, StyleSheet } from 'react-native'
 
 import Container from '../Container'
-import EntryList from '../EntryList'
+import MenuList from '../MenuList'
 
 const Menu = () => {
     return (
@@ -50,7 +50,10 @@ const Menu = () => {
                 />
             </Svg>
             
+          
+            <MenuList />
             </View>
+           
         </Container>
     )
 }
