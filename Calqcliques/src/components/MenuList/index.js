@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+/*import React, {useState} from 'react'
 import { FlatList, TouchableOpacity, View, Text, StyleSheet} from 'react-native'
 
 import {useNavigation} from '@react-navigation/native'
@@ -89,4 +89,98 @@ const styles = StyleSheet.create({
     },
     
 });
+export default MenuList */
+
+
+
+
+
+import React, {useEffect, useState} from 'react'
+import { Alert, FlatList, View, Text, StyleSheet } from 'react-native'
+import {useNavigation} from '@react-navigation/native'
+
+//import EntryListItem from './EntryListItem'
+import MenuListItem from './MenuListItem'
+
+import useEntries from '../../hooks/useEntries'
+
+import Colors from '../../styles/Colors'
+import TermoModal from '../TermoModal'
+
+
+const MenuList = () => {
+
+    const legenda = {
+        id: 1,
+        var1text: "raio inicial da base (r(t)): ",
+        var1num: null,
+        var2text: null,
+        var2num: null,
+        var3text: null,
+        var3num: null,
+        var4text: null,
+        var4num: null,
+    };
+    
+    const legenda1 = ["raio inicial da base (r(t)): "];
+
+    const navigation = useNavigation();
+    const [entries] = useEntries();
+
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const onClosePress = () => {
+        setModalVisible(false);
+    };
+
+    console.log('EntryList :: entries', JSON.stringify(entries));
+
+    return (
+        <View>
+        
+           <FlatList
+           data={legenda1}
+           keyExtractor={item => item.toString()}
+           
+           renderItem={({item, index}) => (
+            /*<Text style={{
+                fontSize: 20,
+                //textAlign: "center",
+                color: Colors.green,
+        
+                 }}>{item.id}</Text>*/
+                // <Text>{`${item}`}</Text>
+         
+           <MenuListItem 
+            
+            entry={item}
+            onEntryPress={ () => {
+               setModalVisible(true);
+            }}
+           />
+
+            
+            
+           )}
+           />
+
+           <TermoModal 
+           isVisible={modalVisible}
+           onCancel={onClosePress}
+           entry={entries.termo1definicao}
+
+           />
+              
+              </View> 
+    )
+}
+const styles = StyleSheet.create({
+    container: {
+       flex: 1,
+        //backgroundColor: Colors.red,
+        padding: 6,
+    },
+    
+});
+
 export default MenuList

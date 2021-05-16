@@ -53,7 +53,7 @@ const Menu = () => {
             
           
             <MenuList />
-            <EntryList />
+            
             </View>
            
         </Container>

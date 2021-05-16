@@ -7,8 +7,8 @@ import {TouchableOpacity,
 import Colors from '../../../styles/Colors'
 
 const EntryListItem = ({entry,onEntryPress}) => {
-    const [termo1, setTermo1] = useState(entry.termo1);
-    const [termo2, setTermo2] = useState(entry.termo2);
+    //const [termo1, setTermo1] = useState(entry.termo1);
+    //const [termo2, setTermo2] = useState(entry.termo2);
     return ( 
         
             <View style={styles.container}>
