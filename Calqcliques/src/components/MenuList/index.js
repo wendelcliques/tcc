@@ -113,7 +113,7 @@ const MenuList = () => {
     const legenda = {
         id: 1,
         var1text: "raio inicial da base (r(t)): ",
-        var1num: null,
+        var1num: 1,
         var2text: null,
         var2num: null,
         var3text: null,
@@ -123,6 +123,15 @@ const MenuList = () => {
     };
     
     const legenda1 = ["raio inicial da base (r(t)): "];
+
+    const [var1text, setVar1text] = useState(legenda.var1text);
+    const [var1num, setVar1num] = useState(legenda.var1num);
+    const [var2text, setVar2text] = useState(legenda.var2text);
+    const [var2num, setVar2num] = useState(legenda.var2num);
+    const [var3text, setVar3text] = useState(legenda.var3text);
+    const [var3num, setVar3num] = useState(legenda.var3num);
+    const [var4text, setVar4text] = useState(legenda.var4text);
+    const [var4num, setVar4num] = useState(legenda.var4num);
 
     const navigation = useNavigation();
     const [entries] = useEntries();
@@ -154,9 +163,31 @@ const MenuList = () => {
            <MenuListItem 
             
             entry={item}
+
+                 var1num={var1num}
+                 var2num={var2num}
+                 var3num={var3num}
+                 var4num={var4num}
+
             onEntryPress={ () => {
                setModalVisible(true);
             }}
+
+            onVar1PressAdd={() => setVar1num(var1num => var1num + 1) }
+            onVar1PressMin={() => setVar1num(var1num => var1num - 1) }
+
+            onVar2PressAdd={() => setVar1num(var2num => var2num + 1)  }
+            onVar2PressMin={() => setVar1num(var2num => var2num - 1)  }
+
+            onVar3PressAdd={() => setVar1num(var3num => var3num + 1)  }
+            onVar3PressMin={() => setVar1num(var3num => var3num - 1)  }
+
+            onVar4PressAdd={() => setVar1num(var4num => var4num + 1)  }
+            onVar4PressMin={() => setVar1num(var4num => var4num - 1)  }
+
+           
+
+
            />
 
             

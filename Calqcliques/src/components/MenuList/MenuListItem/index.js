@@ -54,25 +54,83 @@ import {TouchableOpacity,
 
 import Colors from '../../../styles/Colors'
 
-const MenuListItem = ({entry,onEntryPress}) => {
+const MenuListItem = ({entry,
+    
+    onEntryPress,
+    onVar1PressAdd, 
+    onVar1PressMin, 
+    onVar2PressAdd, 
+    onVar2PressMin,
+    onVar3PressAdd, 
+    onVar3PressMin,
+    onVar4PressAdd, 
+    onVar4PressMin,
+
+    var1num,
+    var2num,
+    var3num,
+    var4num,
+    
+
+}) => {
     //const [termo1, setTermo1] = useState(entry.termo1);
     //const [termo2, setTermo2] = useState(entry.termo2);
+    console.log('MenuListItem :: var1num', JSON.stringify(var1num));
     return ( 
         
             <View style={styles.container}>
            
-           <View >
-               <TouchableOpacity
+           <View style={styles.linha}>
+
+           <TouchableOpacity
                onPress={() => {
-                   onEntryPress && onEntryPress();
+                onVar1PressMin && onVar1PressMin();
                }}
                >
             <Text style={{
-                fontSize:15,
-                color: entry.termo1cor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                fontSize:20,
+                color: "rgba(80,00,00, 1.0)",
+                backgroundColor: "rgba(80,00,00, 0.5)",
+                paddingLeft: 5,
+                paddingRight: 5,
             }}>
-                oi
+                    -
+             </Text>
+             </TouchableOpacity>
+
+
+
+               
+               <TouchableOpacity
+               onPress={() => {
+                onVar1PressAdd && onVar1PressAdd();
+               }}
+               >
+            <Text style={{
+                fontSize: 19,
+                color: entry.termo1cor,
+                //backgroundColor: "rgba(80,80,80, 0.5)",
+                marginLeft: 10,
+                marginRight: 10,
+            }}>
+                    {var1num}
+             </Text>
+             </TouchableOpacity>
+
+             <TouchableOpacity
+               onPress={() => {
+                onVar1PressAdd && onVar1PressAdd();
+               }}
+               >
+            <Text style={{
+                fontSize:20,
+                color: "rgba(00,00,00, 1.0)",
+                backgroundColor: "rgba(00,80,00, 0.5)",
+                paddingLeft: 5,
+                paddingRight: 5,
+                marginTop: -6,
+            }}>
+                    +
              </Text>
              </TouchableOpacity>
              </View>
@@ -202,6 +260,9 @@ const styles = StyleSheet.create({
         //flexDirection: "row",
         backgroundColor: 'blue',
     },
+    linha: {
+        flexDirection: 'row',
+    }
    
     
 });

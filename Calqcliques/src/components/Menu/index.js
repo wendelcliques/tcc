@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Svg, {Ellipse, Polygon} from 'react-native-svg'
 import { View, Text, StyleSheet } from 'react-native'
 
@@ -6,6 +6,36 @@ import Container from '../Container'
 import MenuList from '../MenuList'
 import EntryList from '../EntryList'                                                                         
 const Menu = () => {
+    const legenda = {
+        id: 1,
+        var1text: "raio inicial da base (r(t)): ",
+        var1num: 1,
+        var2text: null,
+        var2num: null,
+        var3text: null,
+        var3num: null,
+        var4text: null,
+        var4num: null,
+    };
+    const [var1num, setVar1num] = useState(legenda.var1num);
+
+
+
+const [var1, setVar1] = useState("54,10 15,62 95,62");
+console.log('Menu :: var1num', JSON.stringify(var1));
+const points = () => {
+    setVar1("54,10 15,62 95,62");
+    console.log('Menu :: var1num', JSON.stringify(var1num));
+    console.log('Menu :: var1', JSON.stringify(var1));
+}
+
+if (var1num === "10" ) {
+    points();
+} else if (var1num === "12" ) {
+    setVar1("54,18 15,62 95,62");
+    console.log('Menu :: var1', JSON.stringify(var1));
+}
+
     return (
         <Container
         title="Menu"
@@ -15,7 +45,7 @@ const Menu = () => {
         flexDirection: 'row'}}>
             <Svg height="100" width="100" >
                 <Polygon
-                points="54,18 15,62 95,62"
+                points={var1}
                 stroke="purple"
                 strokeWidth="2"
                 fill="rgba(99, 99, 00, 1.0)"
@@ -52,7 +82,9 @@ const Menu = () => {
             </Svg>
             
           
-            <MenuList />
+            <MenuList 
+            
+            setVar1/>
             
             </View>
            
