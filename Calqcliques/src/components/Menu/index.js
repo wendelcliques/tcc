@@ -5,36 +5,43 @@ import { View, Text, StyleSheet } from 'react-native'
 import Container from '../Container'
 import MenuList from '../MenuList'
 import EntryList from '../EntryList'                                                                         
-const Menu = () => {
-    const legenda = {
-        id: 1,
-        var1text: "raio inicial da base (r(t)): ",
-        var1num: 1,
-        var2text: null,
-        var2num: null,
-        var3text: null,
-        var3num: null,
-        var4text: null,
-        var4num: null,
-    };
-    const [var1num, setVar1num] = useState(legenda.var1num);
+const Menu = ({
+    legenda,
+    var1numero,
+    var2numero,
+    var3numero,
+    var4numero,
+    onVar1PressAddd,
+    onVar1PressMinn}) => {
+            if (var1numero === 10) {
+                const var1 = "54,00 15,62 95,62";
+            } else if (var1numero === 11 ) {
+                const var1 = "54,10 15,62 95,62"; 
+            } else if (var1numero === 12) {
+                const var1 = "54,18 15,62 95,62"; 
+            }
+        const var1 = var1numero === 10? (var1numero === 11 ? "54,18 15,62 95,62"  : "54,10 15,62 95,62" ) : "54,00 15,62 95,62" ;
+
+        console.log('Menu :: var1', JSON.stringify(var1));
+        console.log('Menu :: legenda esta', JSON.stringify(legenda));
+   // const [var1num, setVar1num] = useState(var1numero);
 
 
 
-const [var1, setVar1] = useState("54,10 15,62 95,62");
-console.log('Menu :: var1num', JSON.stringify(var1));
+//const [var1, setVar1] = useState("54,10 15,62 95,62");
+//console.log('Menu :: var1num', JSON.stringify(var1numero));
 const points = () => {
-    setVar1("54,10 15,62 95,62");
-    console.log('Menu :: var1num', JSON.stringify(var1num));
+    setVar1("54,18 15,62 95,62");
+    //console.log('Menu :: var1num', JSON.stringify(var1num));
     console.log('Menu :: var1', JSON.stringify(var1));
 }
 
-if (var1num === "10" ) {
-    points();
-} else if (var1num === "12" ) {
+/*if (var1numero === 10 ) {
+    setVar1("54,18 15,62 95,62");
+} else if (var1numero === 12 ) {
     setVar1("54,18 15,62 95,62");
     console.log('Menu :: var1', JSON.stringify(var1));
-}
+}*/
 
     return (
         <Container
@@ -44,6 +51,7 @@ if (var1num === "10" ) {
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
             <Svg height="100" width="100" >
+                
                 <Polygon
                 points={var1}
                 stroke="purple"
@@ -52,6 +60,8 @@ if (var1num === "10" ) {
                 >
 
                 </Polygon>
+    
+   
                 <Ellipse
                     cx="55"
                     cy="65"
@@ -83,8 +93,15 @@ if (var1num === "10" ) {
             
           
             <MenuList 
+            legenda={legenda}
+            onVar1PressAddd={onVar1PressAddd}
+            onVar1PressMinn={onVar1PressMinn}
+            var1Numero={var1numero}
+            var2Numero={var2numero}
+            var3Numero={var3numero}
+            var4Numero={var4numero}
             
-            setVar1/>
+            />
             
             </View>
            

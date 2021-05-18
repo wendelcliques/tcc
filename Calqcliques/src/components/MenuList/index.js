@@ -108,30 +108,20 @@ import Colors from '../../styles/Colors'
 import TermoModal from '../TermoModal'
 
 
-const MenuList = () => {
-
-    const legenda = {
-        id: 1,
-        var1text: "raio inicial da base (r(t)): ",
-        var1num: 1,
-        var2text: null,
-        var2num: null,
-        var3text: null,
-        var3num: null,
-        var4text: null,
-        var4num: null,
-    };
+const MenuList = ({
     
-    const legenda1 = ["raio inicial da base (r(t)): "];
+    legenda,
+    onVar1PressAddd,
+    onVar1PressMinn,
+var1Numero,
+var2Numero,
+var3Numero,
+var4Numero
+}) => {
 
-    const [var1text, setVar1text] = useState(legenda.var1text);
-    const [var1num, setVar1num] = useState(legenda.var1num);
-    const [var2text, setVar2text] = useState(legenda.var2text);
-    const [var2num, setVar2num] = useState(legenda.var2num);
-    const [var3text, setVar3text] = useState(legenda.var3text);
-    const [var3num, setVar3num] = useState(legenda.var3num);
-    const [var4text, setVar4text] = useState(legenda.var4text);
-    const [var4num, setVar4num] = useState(legenda.var4num);
+   
+    
+    
 
     const navigation = useNavigation();
     const [entries] = useEntries();
@@ -141,14 +131,17 @@ const MenuList = () => {
     const onClosePress = () => {
         setModalVisible(false);
     };
+    console.log('MenuList :: var1num', JSON.stringify(var1Numero));
 
-    console.log('EntryList :: entries', JSON.stringify(entries));
+    console.log('MenuList :: legenda', JSON.stringify(legenda));
+
+   
 
     return (
         <View>
         
            <FlatList
-           data={legenda1}
+           data={legenda}
            keyExtractor={item => item.toString()}
            
            renderItem={({item, index}) => (
@@ -164,18 +157,18 @@ const MenuList = () => {
             
             entry={item}
 
-                 var1num={var1num}
-                 var2num={var2num}
-                 var3num={var3num}
-                 var4num={var4num}
+                 Var1Numero={var1Numero}
+                 Var2Numero={var2Numero}
+                 var3Numero={var3Numero}
+                 var4Numero={var4Numero}
 
             onEntryPress={ () => {
                setModalVisible(true);
             }}
 
-            onVar1PressAdd={() => setVar1num(var1num => var1num + 1) }
-            onVar1PressMin={() => setVar1num(var1num => var1num - 1) }
-
+            onVar1PressAdd={onVar1PressAddd }
+            onVar1PressMin={onVar1PressMinn }
+          
             onVar2PressAdd={() => setVar1num(var2num => var2num + 1)  }
             onVar2PressMin={() => setVar1num(var2num => var2num - 1)  }
 

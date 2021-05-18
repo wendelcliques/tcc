@@ -93,6 +93,7 @@ const EntryListItem = ({entry,onEntryPress}) => {
             <Text style={{
                  fontSize:25,
                  color: entry.termo7cor,
+                 backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo7} 
             </Text>
@@ -145,9 +146,11 @@ const styles = StyleSheet.create({
         flex: 1,
       flexDirection: 'row',
         //backgroundColor: Colors.red,
+        //backgroundColor: "rgba(80,80,80, 0.5)",
         marginTop: 0,
         marginBottom: -13,
         padding:-10,
+        paddingLeft: 10,
     },
     details1: {
         flex: 1,

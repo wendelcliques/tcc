@@ -20,7 +20,7 @@ const EntryList = () => {
         setModalVisible(false);
     };
 
-    console.log('EntryList :: entries', JSON.stringify(entries));
+    //console.log('EntryList :: entries', JSON.stringify(entries));
 
     return (
         <View>
