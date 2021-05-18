@@ -15,6 +15,7 @@ const EntryList = () => {
     const [entries] = useEntries();
 
     const [modalVisible, setModalVisible] = useState(false);
+    const [termo1d, setTermo1d] = useState([]);
 
     const onClosePress = () => {
         setModalVisible(false);
@@ -30,17 +31,13 @@ const EntryList = () => {
            keyExtractor={item => item.id}
            
            renderItem={({item, index}) => (
-            /*<Text style={{
-                fontSize: 20,
-                //textAlign: "center",
-                color: Colors.green,
         
-                 }}>{item.id}</Text>*/
          
            <EntryListItem 
             
             entry={item}
             onEntryPress={ () => {
+                //setTermo1d(item);
                 setModalVisible(true);
             }}
             />
@@ -53,8 +50,8 @@ const EntryList = () => {
            <TermoModal 
            isVisible={modalVisible}
            onCancel={onClosePress}
-           entry={entries.termo1definicao}
-
+           entry={entry}
+            //termo1dd={termo1d}
            />
               
               </View> 

@@ -8,7 +8,8 @@ const TermoModalList = ({data}) => {
         <FlatList
             data={data}
             keyExtractor={item => item.id}
-            renderItem={({item}) => <TermoModallistItem entry={item} />}
+            renderItem={({item}) => 
+            <TermoModallistItem entry={item} />}
         />
     )
 }
