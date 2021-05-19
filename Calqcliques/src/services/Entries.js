@@ -5,6 +5,7 @@ export const getEntries = async () => {
     let querySnapshot;
     querySnapshot = await firestore()
     .collection('entries')
+    
     .orderBy('order')
     .get();
 

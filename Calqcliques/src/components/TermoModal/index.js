@@ -15,7 +15,18 @@ import useEntries from '../../hooks/useEntries'
 import Colors from '../../styles/Colors'
 import ExplicaList from '../ExplicaT/ExplicaList'
 
-const TermoModal = ({termo1dd, route, navigation, isVisible, onCancel}) => {
+const TermoModal = ({termo1dd,
+    termo2dd,
+    termo3dd,
+    termo4dd,
+    termo5dd,
+    termo6dd,
+    termo7dd,
+    termo8dd,
+    termo9dd,
+    termo10dd,
+    
+    route, navigation, isVisible, onCancel}) => {
    /* const entry = route.params?.entry
     ? route.params.entry
     : {
@@ -55,8 +66,18 @@ const TermoModal = ({termo1dd, route, navigation, isVisible, onCancel}) => {
         <Container>     
         <View>
             
-            <Text>{termo1dd}</Text>
-            < TermoModalList data={entries} />
+            <Text>{termo1dd}
+            {termo2dd}
+            {termo3dd}
+            {termo4dd}
+            {termo5dd}
+            {termo6dd}
+            {termo7dd}
+            {termo8dd}
+            {termo9dd}
+            {termo10dd}
+                   
+            </Text>
 
             <TouchableOpacity
             onPress={onCancel}>

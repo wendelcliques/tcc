@@ -2,16 +2,27 @@ import React, {useState} from 'react'
 import {
     Text,
     View,
+    TouchableOpacity,
     StyleSheet,
   } from 'react-native';
 
   import { DraxProvider, DraxView } from 'react-native-drax';
 
+  import EntryList from '../../components/EntryList';
+
 const Aventura = () => {
     const [received, setReceived] = useState([]);
     const [staged, setStaged] = useState([]);
+    const [linha, setLinha] = useState(1);
 
+    const onPlinha = () => {
+      setLinha(linha => linha + 1);
+      
+    }
 
+    console.log("Aventura :: linha", linha);
+
+console.log("Aventura :: recieved", JSON.stringify(received[5]));
     return (
         <DraxProvider>
         <View style={styles.container}>
@@ -26,14 +37,24 @@ const Aventura = () => {
                 <Text>Receiving Zone</Text>
                 <Text style={styles.incomingPayload}>{payload || '-'}</Text>
                 <Text style={styles.received}>{received.join(' ')}</Text>
+                <Text style={styles.received}>{staged.join(' ')}</Text>
+                
               </>
             );
           }}
           onReceiveDragDrop={(event) => {
+            if(linha === 1) {
             setReceived([
               ...received,
               event.dragged.payload || '?',
             ]);
+          } else if (linha === 2) {
+
+            setStaged([
+              ...staged,
+              event.dragged.payload || '?',
+            ]);
+          }
           }}
         />
 
@@ -82,8 +103,11 @@ const Aventura = () => {
           </DraxView>
         </View>
 
-
-            <Text>Aventura</Text>
+<TouchableOpacity 
+onPress={() => {onPlinha()}}
+>
+            <Text>¬</Text>
+            </TouchableOpacity>
         </View>
         </DraxProvider>
     )

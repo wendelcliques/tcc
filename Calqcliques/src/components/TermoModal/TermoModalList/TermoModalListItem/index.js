@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native'
 const TermoModallistItem = ({entry}) => {
     return (
         <View>
-            //
+            <Text></Text>
         </View>
     )
 }

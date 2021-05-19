@@ -94,7 +94,14 @@ const [var1text, setVar1text] = useState(legenda.var1text);
 
 
       />
-      <EntryList />
+      <EntryList 
+      var1numero={var1num}
+      var2numero={var2num}
+      var3numero={var3num}
+      var4numero={var4num}
+
+      
+      />
       <ExplicaT />
       <EntrySummary />
     </View>
