@@ -7,8 +7,8 @@ import ExplicaList from './ExplicaList'
 
 import useEntries from '../../hooks/useEntries'
 
-const ExplicaT = () => {
-    const [entries] = useEntries();
+const ExplicaT = ({categoria}) => {
+    const [entries] = useEntries(categoria);
     return (
         <Container 
         title="Explicação Teórica">

@@ -1,11 +1,11 @@
 import {Alert} from 'react-native'
 import firestore from '@react-native-firebase/firestore'
 
-export const getEntries = async () => {
+export const getEntries = async (categoria) => {
     let querySnapshot;
     querySnapshot = await firestore()
     .collection('entries')
-    
+    .where('categoria', '==', categoria)
     .orderBy('order')
     .get();
 
@@ -13,7 +13,9 @@ export const getEntries = async () => {
         return {...documentSnapshot.data(), id: documentSnapshot.id};
     });
 
-    //console.log('getEntry :: valor: ', JSON.stringify(entries));
+    console.log('getEntry :: valor: ', JSON.stringify(entries))
+    console.log('getEntry:: categoria', categoria);
+    ;
 
     return entries;
 };

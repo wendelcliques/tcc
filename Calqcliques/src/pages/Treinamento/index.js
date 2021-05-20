@@ -36,7 +36,12 @@ const [var1text, setVar1text] = useState(legenda.var1text);
     const [var4text, setVar4text] = useState(legenda.var4text);
     const [var4num, setVar4num] = useState(legenda.var4num);
 
+    const [categoria, setCategoria] = useState("Bem vindo");
+
+
     const [modalVisible, setModalVisible] = useState(false);
+
+    console.log('Treinamento:: categoria', categoria);
 
     useEffect(() => {
       AsyncStorage.getItem("legendas").then(data => {
@@ -64,6 +69,10 @@ const [var1text, setVar1text] = useState(legenda.var1text);
       console.log("legendas", legendas);
     }
 
+    const onCategoryPress = escolha => {
+      setCategoria(escolha);
+    }
+
   return (
     <View style={styles.container}>
        
@@ -72,6 +81,8 @@ const [var1text, setVar1text] = useState(legenda.var1text);
          <Text>Salvar</Text>
        </TouchableOpacity>
       <Menu
+
+      onConfirm={onCategoryPress}
       legenda={legendas}
 
       var1numero={var1num}
@@ -95,6 +106,7 @@ const [var1text, setVar1text] = useState(legenda.var1text);
 
       />
       <EntryList 
+      categoria={categoria}
       var1numero={var1num}
       var2numero={var2num}
       var3numero={var3num}
@@ -102,8 +114,12 @@ const [var1text, setVar1text] = useState(legenda.var1text);
 
       
       />
-      <ExplicaT />
-      <EntrySummary />
+      <ExplicaT 
+      categoria={categoria}
+      />
+      <EntrySummary 
+      var1numero={var1num}
+      />
     </View>
   )
 }

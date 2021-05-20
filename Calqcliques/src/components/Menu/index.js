@@ -2,10 +2,15 @@ import React, {useState} from 'react'
 import Svg, {Ellipse, Polygon} from 'react-native-svg'
 import { View, Text, StyleSheet } from 'react-native'
 
+import MenuModal from '../MenuModal'
 import Container from '../Container'
 import MenuList from '../MenuList'
-import EntryList from '../EntryList'                                                                         
+import EntryList from '../EntryList'  
+
+
+
 const Menu = ({
+    onConfirm,
     legenda,
     var1numero,
     var2numero,
@@ -13,6 +18,15 @@ const Menu = ({
     var4numero,
     onVar1PressAddd,
     onVar1PressMinn}) => {
+
+        const [modalVisible, setModalVisible] = useState(false);
+
+        const onClosePress = () => {
+           
+            setModalVisible(false);
+        };
+
+
             if (var1numero === 10) {
                 const var1 = "54,00 15,62 95,62";
             } else if (var1numero === 11 ) {
@@ -24,6 +38,8 @@ const Menu = ({
 
         console.log('Menu :: var1', JSON.stringify(var1));
         console.log('Menu :: legenda esta', JSON.stringify(legenda));
+
+        console.log('Menu:: onConfirm', onConfirm)
    // const [var1num, setVar1num] = useState(var1numero);
 
 
@@ -46,7 +62,9 @@ const points = () => {
     return (
         <Container
         title="Menu"
-        onPressActionButton={() => {} }
+        onPressActionButton={() => {
+            setModalVisible(true);
+        } }
         >
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
@@ -101,6 +119,12 @@ const points = () => {
             var3Numero={var3numero}
             var4Numero={var4numero}
             
+            />
+
+            < MenuModal 
+            isVisible={modalVisible}
+            onCancel={onClosePress}
+            onConfirm={onConfirm}
             />
             
             </View>

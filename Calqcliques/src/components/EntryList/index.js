@@ -10,13 +10,14 @@ import Colors from '../../styles/Colors'
 import TermoModal from '../TermoModal'
 
 
-const EntryList = ({var1numero,
+const EntryList = ({categoria,
+    var1numero,
 var2numero,
 var3numero,
 var4numero
 }) => {
     const navigation = useNavigation();
-    const [entries] = useEntries();
+    const [entries] = useEntries(categoria);
 
     const [modalVisible, setModalVisible] = useState(false);
     const [termo1d, setTermo1d] = useState();

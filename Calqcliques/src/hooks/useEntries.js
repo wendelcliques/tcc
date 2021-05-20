@@ -8,18 +8,18 @@ import {
     deleteEntry,
 } from '../services/Entries';
 
-const useEntries = () => {
+const useEntries = (categoria) => {
     const [entries, setEntries] = useState([]);
 
     useFocusEffect(
         useCallback(() => {
             const loadEntries = async () => {
-                const data = await getEntries();
+                const data = await getEntries(categoria);
                 setEntries(data);
             };
             loadEntries();
 
-        }, []),
+        }, [categoria]),
     );
     return [entries, addEntry, updateEntry, deleteEntry];
 };

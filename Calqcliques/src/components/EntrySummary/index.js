@@ -6,10 +6,12 @@ import Container from '../Container'
 import EntrySummaryChart from './EntrySummaryChart'
 
 
-const EntrySummary = () => {
-    const [xa, setXa] = useState(0.1);
+const EntrySummary = ({var1numero}) => {
+    const [xa, setXa] = useState(var1numero);
+
+
     const data1 = [
-        {x: xa, y: -20 },
+        {x: var1numero, y: -20 },
         //{x: -1, y: 0 },
         //{x: 8, y: 13 },
 //{x: 9, y: 11.5 },

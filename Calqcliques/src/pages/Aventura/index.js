@@ -22,7 +22,7 @@ const Aventura = () => {
 
     console.log("Aventura :: linha", linha);
 
-console.log("Aventura :: recieved", JSON.stringify(received[5]));
+console.log("Aventura :: recieved", JSON.stringify(received));
     return (
         <DraxProvider>
         <View style={styles.container}>
