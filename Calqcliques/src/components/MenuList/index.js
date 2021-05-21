@@ -113,6 +113,12 @@ const MenuList = ({
     legenda,
     onVar1PressAddd,
     onVar1PressMinn,
+    onVar2PressAddd,
+    onVar2PressMinn,
+    onVar3PressAddd,
+    onVar3PressMinn,
+    onVar4PressAddd,
+    onVar4PressMinn,
 var1Numero,
 var2Numero,
 var3Numero,
@@ -168,6 +174,12 @@ var4Numero
 
             onVar1PressAdd={onVar1PressAddd }
             onVar1PressMin={onVar1PressMinn }
+            onVar2PressAdd={onVar2PressAddd }
+            onVar2PressMin={onVar2PressMinn }
+            onVar3PressAdd={onVar3PressAddd }
+            onVar3PressMin={onVar3PressMinn }
+            onVar4PressAdd={onVar4PressAddd }
+            onVar4PressMin={onVar4PressMinn }
           
             onVar2PressAdd={() => setVar1num(var2num => var2num + 1)  }
             onVar2PressMin={() => setVar1num(var2num => var2num - 1)  }

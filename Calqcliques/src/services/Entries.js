@@ -5,7 +5,7 @@ export const getEntries = async (categoria) => {
     let querySnapshot;
     querySnapshot = await firestore()
     .collection('entries')
-    .where('categoria', '==', categoria)
+    .where('categoria', '==', categoria? categoria : "Bem vindo")
     .orderBy('order')
     .get();
 

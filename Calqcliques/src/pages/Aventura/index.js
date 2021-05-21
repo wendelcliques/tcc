@@ -4,6 +4,7 @@ import {
     View,
     TouchableOpacity,
     StyleSheet,
+    FlatList,
   } from 'react-native';
 
   import { DraxProvider, DraxView } from 'react-native-drax';
@@ -13,6 +14,13 @@ import {
 const Aventura = () => {
     const [received, setReceived] = useState([]);
     const [staged, setStaged] = useState([]);
+    const [staged1, setStaged1] = useState([]);
+    const [staged2, setStaged2] = useState([]);
+    const [staged3, setStaged3] = useState([]);
+    const [staged4, setStaged4] = useState([]);
+    const [staged5, setStaged5] = useState([]);
+    const [staged6, setStaged6] = useState([]);
+    const [staged7, setStaged7] = useState([]);
     const [linha, setLinha] = useState(1);
 
     const onPlinha = () => {
@@ -21,6 +29,11 @@ const Aventura = () => {
     }
 
     console.log("Aventura :: linha", linha);
+    console.log("Aventura :: recieved", received);
+    console.log("Aventura :: staged", staged);
+    console.log("Aventura :: staged1", staged1);
+    console.log("Aventura :: staged2", staged2);
+    console.log("Aventura :: staged3", staged3);
 
 console.log("Aventura :: recieved", JSON.stringify(received));
     return (
@@ -38,6 +51,13 @@ console.log("Aventura :: recieved", JSON.stringify(received));
                 <Text style={styles.incomingPayload}>{payload || '-'}</Text>
                 <Text style={styles.received}>{received.join(' ')}</Text>
                 <Text style={styles.received}>{staged.join(' ')}</Text>
+                <Text style={styles.received}>{staged1.join(' ')}</Text>
+                <Text style={styles.received}>{staged2.join(' ')}</Text>
+                <Text style={styles.received}>{staged3.join(' ')}</Text>
+                <Text style={styles.received}>{staged4.join(' ')}</Text>
+                <Text style={styles.received}>{staged5.join(' ')}</Text>
+                <Text style={styles.received}>{staged6.join(' ')}</Text>
+                <Text style={styles.received}>{staged7.join(' ')}</Text>
                 
               </>
             );
@@ -52,6 +72,48 @@ console.log("Aventura :: recieved", JSON.stringify(received));
 
             setStaged([
               ...staged,
+              event.dragged.payload || '?',
+            ]);
+          } else if (linha === 3) {
+
+            setStaged1([
+              ...staged1,
+              event.dragged.payload || '?',
+            ]);
+          }else if (linha === 4) {
+
+            setStaged2([
+              ...staged2,
+              event.dragged.payload || '?',
+            ]);
+          }else if (linha === 5) {
+
+            setStaged3([
+              ...staged3,
+              event.dragged.payload || '?',
+            ]);
+          }else if (linha === 6) {
+
+            setStaged4([
+              ...staged4,
+              event.dragged.payload || '?',
+            ]);
+          }else if (linha === 7) {
+
+            setStaged5([
+              ...staged5,
+              event.dragged.payload || '?',
+            ]);
+          }else if (linha === 8) {
+
+            setStaged6([
+              ...staged6,
+              event.dragged.payload || '?',
+            ]);
+          }else if (linha === 9) {
+
+            setStaged7([
+              ...staged7,
               event.dragged.payload || '?',
             ]);
           }
@@ -106,7 +168,7 @@ console.log("Aventura :: recieved", JSON.stringify(received));
 <TouchableOpacity 
 onPress={() => {onPlinha()}}
 >
-            <Text>¬</Text>
+            <Text>¬ {linha}</Text>
             </TouchableOpacity>
         </View>
         </DraxProvider>
@@ -125,7 +187,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     receivingZone: {
-      height: 200,
+      height: 400,
       borderRadius: 10,
     },
     receiving: {

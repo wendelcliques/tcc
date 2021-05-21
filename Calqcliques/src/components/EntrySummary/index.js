@@ -7,7 +7,8 @@ import EntrySummaryChart from './EntrySummaryChart'
 
 
 const EntrySummary = ({var1numero}) => {
-    const [xa, setXa] = useState(var1numero);
+    //const [xa, setXa] = useState(var1numero);
+
 
 
     const data1 = [

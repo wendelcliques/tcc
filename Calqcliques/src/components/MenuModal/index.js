@@ -2,13 +2,18 @@ import React, {useState} from 'react'
 import { 
     Modal,
     View,
+    FlatList,
      Text,
     StyleSheet, 
     TouchableOpacity} from 'react-native'
 
     import ModalContainer from '../ModalContainer'
 
+    import useCategories from '../../hooks/useCategories';
+
 const MenuModal = ({ isVisible, onCancel, onConfirm}) => {
+
+    const [categories ] = useCategories();
 
     const [escolha, setEscolha] = useState("Bem vindo");
     const onCategoryClosePress = () => {
@@ -26,35 +31,24 @@ console.log('MenuModal:: escolha: ', escolha)
         
         >
             <View>
-                <TouchableOpacity 
-                onPress={() => {
-                    setEscolha("Bem vindo");
-                    onConfirm(escolha);
-                    {onCancel}
 
-                }}
-                >
-                <Text>Bem Vindo!</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                 onPress={() => {
-                    setEscolha("taxa de variação");
-                    onConfirm(escolha);
-                    onCategoryClosePress();
-                }}
-                >
-                <Text>Taxa de variação</Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
-                onPress={() => {
-                   
-                    setEscolha("ondas");
-                    onConfirm(escolha);
-                    
-                }}
-                >
-                <Text>Ondas</Text>
-                </TouchableOpacity>
+<FlatList
+data={categories}
+keyExtractor={item => item.id}
+renderItem={({item}) => (
+    <TouchableOpacity
+    onPress={() => onConfirm(item)
+    
+    }>
+        <Text>
+            {item.name}
+        </Text>
+    </TouchableOpacity>
+)}
+/>
+
+
+                
             
 
             <TouchableOpacity

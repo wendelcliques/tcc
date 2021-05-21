@@ -84,7 +84,7 @@ const MenuListItem = ({entry,
             <View style={styles.container}>
            
            <View style={styles.linha}>
-
+            <View style={styles.details1}>
            <Text style={{
                 fontSize: 19,
                 color: entry.termo1cor,
@@ -94,7 +94,7 @@ const MenuListItem = ({entry,
             }}>
                     {entry.var1text}
              </Text>
-
+             </View>
            <TouchableOpacity
                onPress={() => {
                 onVar1PressMin && onVar1PressMin();
@@ -163,7 +163,7 @@ const MenuListItem = ({entry,
 
            <TouchableOpacity
                onPress={() => {
-                onVar1PressMin && onVar1PressMin();
+                onVar2PressMin && onVar2PressMin();
                }}
                >
             <Text style={{
@@ -183,7 +183,7 @@ const MenuListItem = ({entry,
                
                <TouchableOpacity
                onPress={() => {
-                onVar1PressAdd && onVar1PressAdd();
+                onVar2PressAdd && onVar2PressAdd();
                }}
                >
             <Text style={{
@@ -199,7 +199,7 @@ const MenuListItem = ({entry,
 
              <TouchableOpacity
                onPress={() => {
-                onVar1PressAdd && onVar1PressAdd();
+                onVar1PressAdd && onVar3PressAdd();
                }}
                >
             <Text style={{
@@ -345,26 +345,7 @@ const MenuListItem = ({entry,
   </Text>
   </TouchableOpacity>
   </View>
-
-
-
-           
-            
-            
-
-            <View >
-                <TouchableOpacity>
-            <Text style={{
-                 fontSize:25,
-                 color: entry.termo9cor,
-            }} >
-                {entry.termo9} 
-            </Text>
-            </TouchableOpacity>
-            </View>
-
-          
-           
+     
          
             </View>
 
@@ -377,7 +358,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
       
-        //backgroundColor: Colors.red,
+        backgroundColor: Colors.red,
         marginTop: -0,
         marginBottom: -30,
         padding:-10,
@@ -386,7 +367,7 @@ const styles = StyleSheet.create({
     details1: {
         flex: 1,
         //flexDirection: "row",
-        backgroundColor: 'blue',
+        //backgroundColor: 'blue',
     },
     linha: {
         flexDirection: 'row',

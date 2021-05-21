@@ -6,10 +6,12 @@ import MenuModal from '../MenuModal'
 import Container from '../Container'
 import MenuList from '../MenuList'
 import EntryList from '../EntryList'  
+import SvgCone from '../SvgCone'
 
 
 
 const Menu = ({
+    onModalClose,
     onConfirm,
     legenda,
     var1numero,
@@ -26,17 +28,14 @@ const Menu = ({
             setModalVisible(false);
         };
 
+        const onCategoryPress = () => {
+           // onClosePress();
+        };
+        
 
-            if (var1numero === 10) {
-                const var1 = "54,00 15,62 95,62";
-            } else if (var1numero === 11 ) {
-                const var1 = "54,10 15,62 95,62"; 
-            } else if (var1numero === 12) {
-                const var1 = "54,18 15,62 95,62"; 
-            }
-        const var1 = var1numero === 10? (var1numero === 11 ? "54,18 15,62 95,62"  : "54,10 15,62 95,62" ) : "54,00 15,62 95,62" ;
+            
 
-        console.log('Menu :: var1', JSON.stringify(var1));
+      
         console.log('Menu :: legenda esta', JSON.stringify(legenda));
 
         console.log('Menu:: onConfirm', onConfirm)
@@ -49,7 +48,7 @@ const Menu = ({
 const points = () => {
     setVar1("54,18 15,62 95,62");
     //console.log('Menu :: var1num', JSON.stringify(var1num));
-    console.log('Menu :: var1', JSON.stringify(var1));
+  
 }
 
 /*if (var1numero === 10 ) {
@@ -68,52 +67,28 @@ const points = () => {
         >
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
-            <Svg height="100" width="100" >
-                
-                <Polygon
-                points={var1}
-                stroke="purple"
-                strokeWidth="2"
-                fill="rgba(99, 99, 00, 1.0)"
-                >
-
-                </Polygon>
-    
-   
-                <Ellipse
-                    cx="55"
-                    cy="65"
-                    rx="40"
-                    ry="10"
-                    stroke="purple"
-                    strokeWidth="2"
-                    fill="rgba(79, 79, 00, 1.0)"
-                />
-
-<Polygon
-                points="54,0 24,62 85,62"
-                stroke="purple"
-                strokeWidth="2"
-                fill="rgba(00, 00, 99, 0.2)"
-                >
-
-                </Polygon>
-                <Ellipse
-                    cx="55"
-                    cy="65"
-                    rx="30"
-                    ry="7"
-                    stroke="purple"
-                    strokeWidth="2"
-                    fill="rgba(00, 00, 50, 01.0)"
-                />
-            </Svg>
             
+
+<SvgCone 
+var1numero={var1numero}
+var2numero={var2numero}
+/>
+            < MenuModal 
+            isVisible={modalVisible}
+            onCancel={onClosePress}
+            onConfirm={onConfirm}
+            />
           
             <MenuList 
             legenda={legenda}
             onVar1PressAddd={onVar1PressAddd}
             onVar1PressMinn={onVar1PressMinn}
+            onVar2PressAddd={onVar2PressAddd}
+            onVar2PressMinn={onVar2PressMinn}
+            onVar3PressAddd={onVar3PressAddd}
+            onVar3PressMinn={onVar3PressMinn}
+            onVar4PressAddd={onVar4PressAddd}
+            onVar4PressMinn={onVar4PressMinn}
             var1Numero={var1numero}
             var2Numero={var2numero}
             var3Numero={var3numero}
@@ -121,11 +96,7 @@ const points = () => {
             
             />
 
-            < MenuModal 
-            isVisible={modalVisible}
-            onCancel={onClosePress}
-            onConfirm={onConfirm}
-            />
+           
             
             </View>
            
