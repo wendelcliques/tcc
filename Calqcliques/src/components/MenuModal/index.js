@@ -21,11 +21,16 @@ const MenuModal = ({ isVisible, onCancel, onConfirm}) => {
     }
 
 console.log('MenuModal:: escolha: ', escolha)
-
+const onConfirmButton = () => {
+    
+    onCancel();
+};
 
 
     return (
-        <Modal animationType='slide' transparent={true} visible={isVisible}>
+        <Modal animationType='slide' transparent={true} visible={isVisible }
+        // is visible recebe o modal visible do menu
+        >
 
         <ModalContainer
         
@@ -37,7 +42,9 @@ data={categories}
 keyExtractor={item => item.id}
 renderItem={({item}) => (
     <TouchableOpacity
-    onPress={() => onConfirm(item)
+    onPress={
+        
+        () => onConfirm(item)
     
     }>
         <Text>

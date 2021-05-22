@@ -1,51 +1,3 @@
-/*import React from 'react'
-import { TouchableOpacity, View, Text, StyleSheet } from 'react-native'
-
-const MenuListItem = ({legenda, 
-    onVar1PressAdd, 
-    onVar1PressMin, 
-    onVar2PressAdd, 
-    onVar2PressMin,
-    onVar3PressAdd, 
-    onVar3PressMin,
-    onVar4PressAdd, 
-    onVar4PressMin
-
-}) => {
-
-    console.log('MenuListItem :: legend', JSON.stringify(legend));
-
-    return (
-        
-        <View style={styles.container}>
-            
-            <View>
-                <Text>variavel1</Text>
-            </View>
-            
-        </View>
-    )
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-      flexDirection: 'row',
-        //backgroundColor: Colors.red,
-        marginTop: 0,
-        marginBottom: -13,
-        padding:-10,
-    },
-    details1: {
-        flex: 1,
-        //flexDirection: "row",
-        backgroundColor: 'blue',
-    },
-   
-    
-});
-export default MenuListItem */
-
 import React, {useState} from 'react'
 import {TouchableOpacity,
      View,
@@ -69,19 +21,24 @@ const MenuListItem = ({entry,
     Var1Numero,
     Var2Numero,
     Var3Numero,
-    Var4Numero
+    Var4Numero,
     
 
 }) => {
     //const [termo1, setTermo1] = useState(entry.termo1);
     //const [termo2, setTermo2] = useState(entry.termo2);
     console.log('MenuListItem :: var1num', JSON.stringify(Var1Numero));
-    console.log('MenuListItem :: onPress', JSON.stringify(onVar1PressAdd));
+    console.log('MenuListItem :: var2num', JSON.stringify(Var2Numero));
+    console.log('MenuListItem :: var3num', JSON.stringify(Var3Numero));
+    console.log('MenuListItem :: var4num', JSON.stringify(Var4Numero));
+    console.log('MenuListItem :: onPress', onVar1PressAdd);
+    console.log('MenuListItem :: onPress 2', onVar2PressAdd);
+    console.log('MenuListItem :: onPress 3', JSON.stringify(onVar3PressAdd));
     console.log('MenuListItem :: entry', JSON.stringify(entry));
 
     return ( 
         
-            <View style={styles.container}>
+            <View >
            
            <View style={styles.linha}>
             <View style={styles.details1}>
@@ -98,8 +55,8 @@ const MenuListItem = ({entry,
            <TouchableOpacity
                onPress={() => {
                 onVar1PressMin && onVar1PressMin();
-               }}
-               >
+               }} // botão de diminuir numero variável 1
+               > 
             <Text style={{
                 fontSize:20,
                 color: "rgba(80,00,00, 1.0)",
@@ -114,7 +71,7 @@ const MenuListItem = ({entry,
 
 
 
-               
+             <View style={styles.botões}>
                <TouchableOpacity
                onPress={() => {
                 onVar1PressAdd && onVar1PressAdd();
@@ -130,11 +87,11 @@ const MenuListItem = ({entry,
                     {Var1Numero}
              </Text>
              </TouchableOpacity>
-
+</View>
              <TouchableOpacity
                onPress={() => {
                 onVar1PressAdd && onVar1PressAdd();
-               }}
+               }} // botão de aumentar numero variável 1
                >
             <Text style={{
                 fontSize:20,
@@ -149,22 +106,29 @@ const MenuListItem = ({entry,
              </TouchableOpacity>
              </View>
 
-             <View style={styles.linha}>
 
+
+
+
+
+             <View style={styles.linha}>
+             <View style={styles.details1}>
            <Text style={{
                 fontSize: 15,
                 color: entry.termo1cor,
                 //backgroundColor: "rgba(80,80,80, 0.5)",
                 marginLeft: 10,
                 marginRight: 10,
-            }}>
-                    {entry.var2text}
+            }} // texto variável 2 
+            >
+                    {entry.var2text} 
              </Text>
+             </View>
 
            <TouchableOpacity
                onPress={() => {
                 onVar2PressMin && onVar2PressMin();
-               }}
+               }} // botão de diminuir variável 2
                >
             <Text style={{
                 fontSize:20,
@@ -180,12 +144,13 @@ const MenuListItem = ({entry,
 
 
 
-               
+             <View style={styles.botões}>
                <TouchableOpacity
                onPress={() => {
                 onVar2PressAdd && onVar2PressAdd();
-               }}
+               }}// botão de aumentar vairável 2
                >
+                   
             <Text style={{
                 fontSize: 19,
                 color: entry.termo1cor,
@@ -196,10 +161,10 @@ const MenuListItem = ({entry,
                     {Var2Numero}
              </Text>
              </TouchableOpacity>
-
+</View>
              <TouchableOpacity
                onPress={() => {
-                onVar1PressAdd && onVar3PressAdd();
+                onVar2PressAdd && onVar2PressAdd();
                }}
                >
             <Text style={{
@@ -215,8 +180,14 @@ const MenuListItem = ({entry,
              </TouchableOpacity>
              </View>
 
-             <View style={styles.linha}>
 
+
+
+
+
+
+             <View style={styles.linha}>
+             <View style={styles.details1}>
 <Text style={{
      fontSize: 19,
      color: entry.termo1cor,
@@ -226,10 +197,10 @@ const MenuListItem = ({entry,
  }}>
          {entry.var3text}
   </Text>
-
+</View>
 <TouchableOpacity
     onPress={() => {
-     onVar1PressMin && onVar1PressMin();
+     onVar3PressMin && onVar3PressMin();
     }}
     >
  <Text style={{
@@ -246,10 +217,10 @@ const MenuListItem = ({entry,
 
 
 
-    
+    <View style={styles.botões}>
     <TouchableOpacity
     onPress={() => {
-     onVar1PressAdd && onVar1PressAdd();
+     onVar3PressAdd && onVar3PressAdd();
     }}
     >
  <Text style={{
@@ -262,10 +233,10 @@ const MenuListItem = ({entry,
          {Var3Numero}
   </Text>
   </TouchableOpacity>
-
+  </View>
   <TouchableOpacity
     onPress={() => {
-     onVar1PressAdd && onVar1PressAdd();
+     onVar3PressAdd && onVar3PressAdd();
     }}
     >
  <Text style={{
@@ -280,8 +251,12 @@ const MenuListItem = ({entry,
   </Text>
   </TouchableOpacity>
   </View>
-  <View style={styles.linha}>
 
+
+
+
+  <View style={styles.linha}>
+  <View style={styles.details1}>
 <Text style={{
      fontSize: 19,
      color: entry.termo1cor,
@@ -291,10 +266,11 @@ const MenuListItem = ({entry,
  }}>
         {entry.var4text}
   </Text>
+</View>
 
 <TouchableOpacity
     onPress={() => {
-     onVar1PressMin && onVar1PressMin();
+     onVar4PressMin && onVar4PressMin();
     }}
     >
  <Text style={{
@@ -311,14 +287,15 @@ const MenuListItem = ({entry,
 
 
 
-    
+  <View style={styles.botões}>
     <TouchableOpacity
     onPress={() => {
-     onVar1PressAdd && onVar1PressAdd();
+     onVar4PressAdd && onVar4PressAdd();
     }}
     >
  <Text style={{
-     fontSize: 19,
+     
+     fontSize: 20,
      color: entry.termo1cor,
      //backgroundColor: "rgba(80,80,80, 0.5)",
      marginLeft: 10,
@@ -327,10 +304,11 @@ const MenuListItem = ({entry,
          {Var4Numero}
   </Text>
   </TouchableOpacity>
+  </View>
 
   <TouchableOpacity
     onPress={() => {
-     onVar1PressAdd && onVar1PressAdd();
+     onVar4PressAdd && onVar4PressAdd();
     }}
     >
  <Text style={{
@@ -344,6 +322,7 @@ const MenuListItem = ({entry,
          +
   </Text>
   </TouchableOpacity>
+  
   </View>
      
          
@@ -356,13 +335,14 @@ const MenuListItem = ({entry,
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        //flex: 1,
       
         backgroundColor: Colors.red,
-        marginTop: -0,
-        marginBottom: -30,
-        padding:-10,
-        paddingLeft: 0,
+        alignContent: 'center',
+        //marginTop: -0,
+       // marginBottom: 0,
+        //padding:-10,
+        //paddingLeft: 0,
     },
     details1: {
         flex: 1,
@@ -371,7 +351,12 @@ const styles = StyleSheet.create({
     },
     linha: {
         flexDirection: 'row',
-    }
+        
+    },
+    botões: {
+flexDirection: 'row',
+minWidth: 45,
+    },
    
     
 });

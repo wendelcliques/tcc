@@ -8,9 +8,11 @@ import EntrySummaryChart from './EntrySummaryChart'
 
 const EntrySummary = ({var1numero}) => {
     //const [xa, setXa] = useState(var1numero);
-
-
-
+let y1 = Math.sin(-10);
+let y2 = Math.sin(-5);
+let y3 = Math.sin(0);
+let y4 = Math.sin(5);
+let y5 = Math.sin(10);
     const data1 = [
         {x: var1numero, y: -20 },
         //{x: -1, y: 0 },
@@ -20,13 +22,14 @@ const EntrySummary = ({var1numero}) => {
         ]
 
         const data2 = [
-            {x: -2, y: 18 },
+            {x: -10, y: y1 },
             //{x: -1, y: 10 },
-           // {x: 0, y: 12 },
-            {x: 4, y: -8 },
+           {x: -5, y: y2 },
+           {x: 0, y: y3 },
+            {x: 5, y: y4 },
             //{x: 8, y: 12 },
            // {x: 9, y: 13.5 },
-            {x: 10, y: 18 }
+            {x: 10, y: y5 }
             ]
     return (
         <Container>

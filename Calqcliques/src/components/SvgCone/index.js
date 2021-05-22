@@ -7,6 +7,15 @@ const SvgCone = ({var1numero, var2numero}) => {
     let var1 = '';
     let var2 = '';
 
+    let var3 ="54,50";
+
+    let teste = [var3, "24,82", "85,82"]
+
+    console.log("teste", teste[0])
+
+    let teste1 = JSON.stringify(teste);
+
+ console.log("teste1", teste1);
         if (var1numero === 10) {
              var1 = "54,30 24,82 85,82";
         } else if (var1numero === 11 ) {

@@ -9,8 +9,8 @@ const EntrySummaryChart = ({data1, data2}) => {
         <View>
             <Chart
                 style={{height: 100, width: '50%', backgroundColor: '#eee'}}
-                xDomain={{ min: -2, max: 10 }}
-                yDomain={{ min: -10, max: 20 }}
+                xDomain={{ min: -10, max: 10 }}
+                yDomain={{ min: -1.1, max: 1.1 }}
                 padding={{ left: 20, top: 10, bottom: 10, right: 10 }}
             >
                 <VerticalAxis tickValues={[-8, -4, 0, 4, 8, 12, 16, 20]} />

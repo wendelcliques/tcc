@@ -14,7 +14,7 @@ const EntryList = ({categoria,
     var1numero,
 var2numero,
 var3numero,
-var4numero
+var4numero,
 }) => {
     const navigation = useNavigation();
     const [entries] = useEntries(categoria);

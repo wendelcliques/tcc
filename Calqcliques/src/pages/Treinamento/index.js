@@ -9,7 +9,8 @@ import TermoModal from '../../components/TermoModal'
 import Menu from '../../components/Menu'
 import ExplicaT from '../../components/ExplicaT'
 import EntrySummary from '../../components/EntrySummary'
-
+import MenuModal from '../../components/MenuModal'
+import Botão from '../../components/Container/Botão'
 
 
 import Colors from '../../styles/Colors';
@@ -41,7 +42,15 @@ const [var1text, setVar1text] = useState(legenda.var1text);
 
     const [modalVisible, setModalVisible] = useState(false);
 
+    const [modalVisible1, setModalVisible1] = useState(false);
+
+    const onClosePress = () => {
+       
+        setModalVisible1(false);
+    };
+
     console.log('Treinamento:: categoria', categoria);
+    console.log('Treinamento:: numero variavel 2', var2num);
 
     useEffect(() => {
       AsyncStorage.getItem("legendas").then(data => {
@@ -59,9 +68,13 @@ const [var1text, setVar1text] = useState(legenda.var1text);
       const data = {
         id,
         var1text,
+        var1num,
         var2text,
+        var2num,
         var3text,
+        var3num,
         var4text,
+        var4num,
       };
 
       legendas.push(data);
@@ -79,9 +92,12 @@ const [var1text, setVar1text] = useState(legenda.var1text);
       }
     }
 
+    const onOpenPress = () => {
+      setModalVisible1(true);
+    }
     const onCategoryPress = item => {
       setCategoria(item.name);
-      setModalVisible(false);
+      setModalVisible1(false);
     }
 
   return (
@@ -95,11 +111,21 @@ const [var1text, setVar1text] = useState(legenda.var1text);
        onPress={onDelete} >
          <Text>Deletar</Text>
        </TouchableOpacity>
+       
+       < MenuModal 
+            isVisible={modalVisible1}
+            onCancel={onClosePress}
+            onConfirm={onCategoryPress}
+            
+            />
+            
+
       <Menu
 
+      onMenuPress={onOpenPress}
       onModalClose={modalVisible}
 
-      onConfirm={onCategoryPress}
+      
       legenda={legendas}
 
       var1numero={var1num}
@@ -107,18 +133,20 @@ const [var1text, setVar1text] = useState(legenda.var1text);
       var3numero={var3num}
       var4numero={var4num}
 
-
+// variáveis e botões são enviadas da tela treinamento 
+// para a tela menu. então são enviadas diretamente para
+// a tele menu list (lista das legendas)
       onVar1PressAddd={() => setVar1num(var1num => var1num + 1) }
       onVar1PressMinn={() => setVar1num(var1num => var1num - 1) }
     
-      onVar2PressAdd={() => setVar2num(var2num => var2num + 1)  }
-      onVar2PressMin={() => setVar2num(var2num => var2num - 1)  }
+      onVar2PressAddd={() => setVar2num(var2num => var2num + 1)  }
+      onVar2PressMinn={() => setVar2num(var2num => var2num - 1)  }
 
-      onVar3PressAdd={() => setVar3num(var3num => var3num + 1)  }
-      onVar3PressMin={() => setVar3num(var3num => var3num - 1)  }
+      onVar3PressAddd={() => setVar3num(var3num => var3num + 1)  }
+      onVar3PressMinn={() => setVar3num(var3num => var3num - 1)  }
 
-      onVar4PressAdd={() => setVar4num(var4num => var4num + 1)  }
-      onVar4PressMin={() => setVar4num(var4num => var4num - 1)  }
+      onVar4PressAddd={() => setVar4num(var4num => var4num + 1)  }
+      onVar4PressMinn={() => setVar4num(var4num => var4num - 1)  }
 
 
       />

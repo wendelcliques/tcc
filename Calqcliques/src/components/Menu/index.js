@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Svg, {Ellipse, Polygon} from 'react-native-svg'
 import { View, Text, StyleSheet } from 'react-native'
 
-import MenuModal from '../MenuModal'
+//import MenuModal from '../MenuModal'
 import Container from '../Container'
 import MenuList from '../MenuList'
 import EntryList from '../EntryList'  
@@ -11,22 +11,25 @@ import SvgCone from '../SvgCone'
 
 
 const Menu = ({
-    onModalClose,
-    onConfirm,
+    onMenuPress,
     legenda,
     var1numero,
     var2numero,
     var3numero,
     var4numero,
     onVar1PressAddd,
-    onVar1PressMinn}) => {
+    onVar1PressMinn,
+    onVar2PressAddd,
+    onVar2PressMinn,
+    onVar3PressAddd,
+    onVar3PressMinn,
+    onVar4PressAddd,
+    onVar4PressMinn,
 
-        const [modalVisible, setModalVisible] = useState(false);
 
-        const onClosePress = () => {
-           
-            setModalVisible(false);
-        };
+}) => {
+
+       
 
         const onCategoryPress = () => {
            // onClosePress();
@@ -38,7 +41,12 @@ const Menu = ({
       
         console.log('Menu :: legenda esta', JSON.stringify(legenda));
 
-        console.log('Menu:: onConfirm', onConfirm)
+        console.log('Menu :: legenda variável 2', var2numero);
+
+        console.log('Menu :: botão 2', onVar2PressAddd );
+
+       // console.log('Menu:: onConfirm', onConfirm)
+       // console.log('Menu:: onmodalclose', onModalClose)
    // const [var1num, setVar1num] = useState(var1numero);
 
 
@@ -61,9 +69,9 @@ const points = () => {
     return (
         <Container
         title="Menu"
-        onPressActionButton={() => {
-            setModalVisible(true);
-        } }
+        onPressActionButton={
+            onMenuPress
+         } // recebe o botão do container e seta true o modal visible do MenuModal
         >
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
@@ -73,11 +81,7 @@ const points = () => {
 var1numero={var1numero}
 var2numero={var2numero}
 />
-            < MenuModal 
-            isVisible={modalVisible}
-            onCancel={onClosePress}
-            onConfirm={onConfirm}
-            />
+            
           
             <MenuList 
             legenda={legenda}

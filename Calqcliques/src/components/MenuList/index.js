@@ -139,25 +139,24 @@ var4Numero
     };
     console.log('MenuList :: var1num', JSON.stringify(var1Numero));
 
+    console.log('MenuList :: var2num', JSON.stringify(var2Numero));
+    console.log('MenuList :: var3num', JSON.stringify(var3Numero));
+    console.log('MenuList :: var4num', JSON.stringify(var4Numero));
+
+    console.log('MenuList :: botão 2',  onVar2PressAddd);
     console.log('MenuList :: legenda', JSON.stringify(legenda));
 
    
 
     return (
-        <View>
+        <View style={styles.container}>
         
            <FlatList
            data={legenda}
            keyExtractor={item => item.toString()}
            
            renderItem={({item, index}) => (
-            /*<Text style={{
-                fontSize: 20,
-                //textAlign: "center",
-                color: Colors.green,
-        
-                 }}>{item.id}</Text>*/
-                // <Text>{`${item}`}</Text>
+           
          
            <MenuListItem 
             
@@ -165,8 +164,8 @@ var4Numero
 
                  Var1Numero={var1Numero}
                  Var2Numero={var2Numero}
-                 var3Numero={var3Numero}
-                 var4Numero={var4Numero}
+                 Var3Numero={var3Numero}
+                 Var4Numero={var4Numero}
 
             onEntryPress={ () => {
                setModalVisible(true);
@@ -180,17 +179,7 @@ var4Numero
             onVar3PressMin={onVar3PressMinn }
             onVar4PressAdd={onVar4PressAddd }
             onVar4PressMin={onVar4PressMinn }
-          
-            onVar2PressAdd={() => setVar1num(var2num => var2num + 1)  }
-            onVar2PressMin={() => setVar1num(var2num => var2num - 1)  }
-
-            onVar3PressAdd={() => setVar1num(var3num => var3num + 1)  }
-            onVar3PressMin={() => setVar1num(var3num => var3num - 1)  }
-
-            onVar4PressAdd={() => setVar1num(var4num => var4num + 1)  }
-            onVar4PressMin={() => setVar1num(var4num => var4num - 1)  }
-
-           
+                  
 
 
            />

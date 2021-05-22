@@ -21,7 +21,7 @@ const EntryListItem = ({entry,
     Var1Numero,
     Var2Numero,
     Var3Numero,
-    Var4Numero
+    Var4Numero,
 }) => {
     //const [termo1, setTermo1] = useState(entry.termo1);
     //const [termo2, setTermo2] = useState(entry.termo2);

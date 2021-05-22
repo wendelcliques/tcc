@@ -22,7 +22,7 @@ const Container = ({
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.asphalt,
+        backgroundColor: Colors.blue,
         borderRadius: 5,
         borderStyle: 'solid',
         borderWidth: 1,
@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
         padding: 8,
     },
     title: {
-        fontSize: 12,
-        color: Colors.white,
+        fontSize: 13,
+        color: Colors.carbonDark,
         marginBottom: 5,
     }
 })
