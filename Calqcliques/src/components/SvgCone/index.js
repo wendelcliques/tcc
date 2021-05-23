@@ -13,20 +13,20 @@ const SvgCone = ({var1numero, var2numero, var3numero, var4numero}) => {
 
 
   
-        if (var1numero === 11 ) {
-             var1 = "54,30 24,82 85,82";
-        } else if (var1numero === 12 ) {
-             var1 = "54,20 24,82 85,82"; 
-        } else if (var1numero === 13) {
-             var1 = "54,10 24,82 85,82"; 
+        if (var3numero === 8 ) {
+             var3 = "54,30 24,82 85,82";
+        } else if (var3numero === 10 ) {
+             var3 = "54,20 24,82 85,82"; 
+        } else if (var3numero === 12) {
+             var3 = "54,10 24,82 85,82"; 
         }
 
         if (var3numero === 8) {
-            var2 = "54,18 15,82 95,82";
+            var2 = "54,18 15,84 95,84";
        } else if (var3numero === 10 ) {
-            var2 = "54,10 15,82 95,82"; 
+            var2 = "54,10 15,84 95,84"; 
        } else if (var3numero === 12) {
-            var2 = "54,00 15,82 95,82"; 
+            var2 = "54,00 15,84 95,84"; 
        }
    // const var1 = var1
     return (
@@ -55,7 +55,7 @@ const SvgCone = ({var1numero, var2numero, var3numero, var4numero}) => {
                
 
 <Polygon
-                points= {var1}
+                points= {var3}
                 stroke="purple"
                 strokeWidth="2"
                 fill="rgba(00, 00, 99, 0.2)"
