@@ -100,6 +100,12 @@ const [var1text, setVar1text] = useState(legenda.var1text);
       setModalVisible1(false);
     }
 
+    const onVar1Press = () => {
+if (var1num < 12) {
+        
+        () => setVar1num(var1num => var1num + 1)}
+    };
+
   return (
     <View style={styles.container}>
        
@@ -136,7 +142,12 @@ const [var1text, setVar1text] = useState(legenda.var1text);
 // variáveis e botões são enviadas da tela treinamento 
 // para a tela menu. então são enviadas diretamente para
 // a tele menu list (lista das legendas)
-      onVar1PressAddd={() => setVar1num(var1num => var1num + 1) }
+      onVar1PressAddd={
+
+        onVar1Press()
+        
+      
+      }
       onVar1PressMinn={() => setVar1num(var1num => var1num - 1) }
     
       onVar2PressAddd={() => setVar2num(var2num => var2num + 1)  }
