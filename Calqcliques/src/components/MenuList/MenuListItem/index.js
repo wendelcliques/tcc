@@ -73,7 +73,10 @@ const MenuListItem = ({entry,
 
              <View style={styles.botões}>
                <TouchableOpacity
-               onPress={() => {
+               
+               onPress={
+                   
+                () => {
                 onVar1PressAdd && onVar1PressAdd();
                }}
                >

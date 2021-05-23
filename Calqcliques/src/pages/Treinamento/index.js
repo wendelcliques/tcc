@@ -10,7 +10,7 @@ import Menu from '../../components/Menu'
 import ExplicaT from '../../components/ExplicaT'
 import EntrySummary from '../../components/EntrySummary'
 import MenuModal from '../../components/MenuModal'
-import Botão from '../../components/Container/Botão'
+
 
 
 import Colors from '../../styles/Colors';
@@ -19,13 +19,13 @@ const Treinamento = ({navigation}) => {
   const legenda = {
     id: 1,
     var1text: "(r(t)): ",
-    var1num: 9,
-    var2text: "(r²(t)): ",
-    var2num: 10,
+    var1num: 12,
+    var2text: "(r'(t)): ",
+    var2num: 1,
     var3text: "(h(t)): ",
-    var3num: 2,
-    var4text: "(h(t)): ",
-    var4num: 1,
+    var3num: 10,
+    var4text: "(h'(t)): ",
+    var4num: 2,
 };
 const [legendas, setLegendas] = useState([]);
 const [var1text, setVar1text] = useState(legenda.var1text);
@@ -100,11 +100,10 @@ const [var1text, setVar1text] = useState(legenda.var1text);
       setModalVisible1(false);
     }
 
-    const onVar1Press = () => {
-if (var1num < 12) {
-        
-        () => setVar1num(var1num => var1num + 1)}
-    };
+ let var1 = 12;
+
+ 
+
 
   return (
     <View style={styles.container}>
@@ -143,21 +142,45 @@ if (var1num < 12) {
 // para a tela menu. então são enviadas diretamente para
 // a tele menu list (lista das legendas)
       onVar1PressAddd={
+       var1num < 14 ? () => setVar1num(var1num => var1num + 1) :
+       setVar1num(13)
 
-        onVar1Press()
-        
       
       }
-      onVar1PressMinn={() => setVar1num(var1num => var1num - 1) }
+      onVar1PressMinn={
+        
+       var1num > 10 ? () => setVar1num(var1num => var1num - 1) :
+       setVar1num(11)
+      }
     
-      onVar2PressAddd={() => setVar2num(var2num => var2num + 1)  }
-      onVar2PressMinn={() => setVar2num(var2num => var2num - 1)  }
+      onVar2PressAddd={
+        
+        var2num < 2 ? () => setVar2num(var2num => var2num + 1) :
+      setVar2num(1)
+      }
+      onVar2PressMinn={
+        
+        var2num > -2 ? () => setVar2num(var2num => var2num - 1) : setVar2num(-1) }
 
-      onVar3PressAddd={() => setVar3num(var3num => var3num + 1)  }
-      onVar3PressMinn={() => setVar3num(var3num => var3num - 1)  }
 
-      onVar4PressAddd={() => setVar4num(var4num => var4num + 1)  }
-      onVar4PressMinn={() => setVar4num(var4num => var4num - 1)  }
+      onVar3PressAddd={
+        var3num < 13 ? () => setVar3num(var3num => var3num + 2) :
+      setVar3num(12)
+      }
+      onVar3PressMinn={
+        
+        var3num > 7 ?  () => setVar3num(var3num => var3num - 2) :
+      setVar3num(8)
+      }
+
+
+      onVar4PressAddd={
+        
+        var4num < 3 ? () => setVar4num(var4num => var4num + 2) :
+      setVar4num(2)
+      }
+      onVar4PressMinn={
+        var4num > -3 ? () => setVar4num(var4num => var4num - 2) : setVar4num(-2) }
 
 
       />
