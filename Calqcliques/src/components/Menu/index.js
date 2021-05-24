@@ -78,6 +78,8 @@ const points = () => {
             
 
 <SvgCone 
+
+
 var1numero={var1numero}
 var2numero={var2numero}
 var3numero={var3numero}
