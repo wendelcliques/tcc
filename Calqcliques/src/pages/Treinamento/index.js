@@ -10,6 +10,7 @@ import Menu from '../../components/Menu'
 import ExplicaT from '../../components/ExplicaT'
 import EntrySummary from '../../components/EntrySummary'
 import MenuModal from '../../components/MenuModal'
+import Desenvolvimento from '../../components/Desenvolvimento'
 
 
 
@@ -100,9 +101,30 @@ const [var1text, setVar1text] = useState(legenda.var1text);
       setModalVisible1(false);
     }
 
- let var1 = 12;
+  let taxaaltura = var4num === 0 ? 0.00000000001 : var4num;
 
- 
+ let x1 = ((2*var1num*var2num*var3num)-(2*var1num*var2num*var3num))/(2*var1num*var1num*taxaaltura); 
+
+ let x2 = ((2*var1num*var2num*var3num)+(2*var1num*var2num*var3num))/(2*var1num*var1num*taxaaltura);
+
+ let xv = (x2-x1)/2;
+ let yv = (xv*xv*var4num)+(2*xv*var2num*var3num);
+
+ let ymin = ((var1num)*(var1num)*var4num)+(2*(var1num)*var2num*var3num);
+
+ let ymax = (var1num*var1num*var4num)+(2*var1num*var2num*var3num);
+
+ let xmin = (-1*var1num);
+ let xmax = var1num;
+ /*let raioinicial = 5;
+let taxaraio = 1;
+let altinicial = 1;
+let taxaalt = 1;
+
+
+let a = 2*raioinicial*raioinicial*taxaalt
+
+let b = 2*raioinicial*taxaraio*altinicial;*/
 
 
   return (
@@ -193,11 +215,29 @@ const [var1text, setVar1text] = useState(legenda.var1text);
 
       
       />
+
+      <Desenvolvimento 
+      
+      />
       <ExplicaT 
       categoria={categoria}
       />
       <EntrySummary 
-      var1numero={var1num}
+    var1numero={var1num}
+    var2numero={var2num}
+    var3numero={var3num}
+    var4numero={var4num}
+
+    x1={x1}
+    x2={x2}
+    xv={xv}
+    yv={yv}
+
+    xmin={xmin}
+    xmax={xmax}
+    ymin={ymin}
+    ymax={ymax}
+
       />
     </View>
   )

@@ -2,17 +2,18 @@ import React, {useEffect, useState} from 'react'
 import { Alert, FlatList, View, Text, StyleSheet } from 'react-native'
 import {useNavigation} from '@react-navigation/native'
 
-import EntryListItem from './EntryListItem'
-
 import useEntries from '../../hooks/useEntries'
 
 import Colors from '../../styles/Colors'
 import TermoModal from '../TermoModal'
 
-
-const EntryList = ({categoria,
- 
+const Desenvolvimento = ({categoria,
+    var1numero,
+var2numero,
+var3numero,
+var4numero,
 }) => {
+
     const navigation = useNavigation();
     const [entries] = useEntries(categoria);
 
@@ -40,20 +41,22 @@ const EntryList = ({categoria,
         setTermo9d();
         setTermo10d();
         setModalVisible(false);
-    };
+    }
 
-    //console.log('EntryList :: entries', JSON.stringify(entries));
+
 
     return (
         <View>
-        
-           <FlatList
+            <Text>Substituindo as variáveis por valores:</Text>
+            <FlatList
            data={entries}
            keyExtractor={item => item.id}
            
            renderItem={({item, index}) => (
+
+            <Text> </Text>
         
-         
+         /*
            <EntryListItem 
             
             entry={item}
@@ -107,51 +110,12 @@ const EntryList = ({categoria,
 
             />
 
-            
+            */
             
            )}
            />
-
-           <TermoModal 
-           isVisible={modalVisible}
-           onCancel={onClosePress}
-          
-            termo1dd={termo1d}
-            termo2dd={termo2d}
-            termo3dd={termo3d}
-            termo4dd={termo4d}
-            termo5dd={termo5d}
-            termo6dd={termo6d}
-            termo7dd={termo7d}
-            termo8dd={termo8d}
-            termo9dd={termo9d}
-            termo10dd={termo10d}
-
-           />
-
-
-           
-            
-           
-              
-              </View> 
+        </View>
     )
 }
-const styles = StyleSheet.create({
-    container: {
-       flex: 1,
-        //color: Colors.red,
-        padding: 6,
-        fontSize: 20,
-    },
-    
-});
 
-export default EntryList
-/*
-<EntryListItem 
-entry={item}
-onEntryPress={ () => {}
-    //Alert.alert('clicou')
-}
-/>*/
+export default Desenvolvimento

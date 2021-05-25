@@ -40,6 +40,153 @@ const MenuListItem = ({entry,
         
             <View >
            
+
+           <View style={styles.linha}>
+             <View style={styles.details1}>
+<Text style={{
+     fontSize: 19,
+     color: entry.termo1cor,
+     //backgroundColor: "rgba(80,80,80, 0.5)",
+     marginLeft: 10,
+     marginRight: 10,
+ }}>
+         {entry.var3text}
+  </Text>
+</View>
+<TouchableOpacity
+    onPress={() => {
+     onVar3PressMin && onVar3PressMin();
+    }}
+    >
+ <Text style={{
+     fontSize:20,
+     color: "rgba(80,00,00, 1.0)",
+     backgroundColor: "rgba(80,00,00, 0.5)",
+     paddingLeft: 5,
+     paddingRight: 5,
+     marginTop: -5,
+ }}>
+         -
+  </Text>
+  </TouchableOpacity>
+
+
+
+    <View style={styles.botões}>
+    <TouchableOpacity
+    onPress={() => {
+     onVar3PressAdd && onVar3PressAdd();
+    }}
+    >
+ <Text style={{
+     fontSize: 19,
+     color: entry.termo1cor,
+     //backgroundColor: "rgba(80,80,80, 0.5)",
+     marginLeft: 10,
+     marginRight: 10,
+ }}>
+         {Var3Numero}
+  </Text>
+  </TouchableOpacity>
+  </View>
+  <TouchableOpacity
+    onPress={() => {
+     onVar3PressAdd && onVar3PressAdd();
+    }}
+    >
+ <Text style={{
+     fontSize:20,
+     color: "rgba(00,00,00, 1.0)",
+     backgroundColor: "rgba(00,80,00, 0.5)",
+     paddingLeft: 5,
+     paddingRight: 5,
+     marginTop: -5,
+ }}>
+         +
+  </Text>
+  </TouchableOpacity>
+  </View>
+
+
+
+
+  <View style={styles.linha}>
+  <View style={styles.details1}>
+<Text style={{
+     fontSize: 19,
+     color: entry.termo1cor,
+     //backgroundColor: "rgba(80,80,80, 0.5)",
+     marginLeft: 10,
+     marginRight: 10,
+ }}>
+        {entry.var4text}
+  </Text>
+</View>
+
+<TouchableOpacity
+    onPress={() => {
+     onVar4PressMin && onVar4PressMin();
+    }}
+    >
+ <Text style={{
+     fontSize:20,
+     color: "rgba(80,00,00, 1.0)",
+     backgroundColor: "rgba(80,00,00, 0.5)",
+     paddingLeft: 5,
+     paddingRight: 5,
+     marginTop: -5,
+ }}>
+         -
+  </Text>
+  </TouchableOpacity>
+
+
+
+  <View style={styles.botões}>
+    <TouchableOpacity
+    onPress={() => {
+     onVar4PressAdd && onVar4PressAdd();
+    }}
+    >
+ <Text style={{
+     
+     fontSize: 20,
+     color: entry.termo1cor,
+     //backgroundColor: "rgba(80,80,80, 0.5)",
+     marginLeft: 10,
+     marginRight: 10,
+ }}>
+         {Var4Numero}
+  </Text>
+  </TouchableOpacity>
+  </View>
+
+  <TouchableOpacity
+    onPress={() => {
+     onVar4PressAdd && onVar4PressAdd();
+    }}
+    >
+ <Text style={{
+     fontSize:20,
+     color: "rgba(00,00,00, 1.0)",
+     backgroundColor: "rgba(00,80,00, 0.5)",
+     paddingLeft: 5,
+     paddingRight: 5,
+     marginTop: -5,
+ }}>
+         +
+  </Text>
+  </TouchableOpacity>
+  
+  </View>
+     
+
+
+
+
+
+
+
            <View style={styles.linha}>
             <View style={styles.details1}>
            <Text style={{
@@ -189,145 +336,7 @@ const MenuListItem = ({entry,
 
 
 
-             <View style={styles.linha}>
-             <View style={styles.details1}>
-<Text style={{
-     fontSize: 19,
-     color: entry.termo1cor,
-     //backgroundColor: "rgba(80,80,80, 0.5)",
-     marginLeft: 10,
-     marginRight: 10,
- }}>
-         {entry.var3text}
-  </Text>
-</View>
-<TouchableOpacity
-    onPress={() => {
-     onVar3PressMin && onVar3PressMin();
-    }}
-    >
- <Text style={{
-     fontSize:20,
-     color: "rgba(80,00,00, 1.0)",
-     backgroundColor: "rgba(80,00,00, 0.5)",
-     paddingLeft: 5,
-     paddingRight: 5,
-     marginTop: -5,
- }}>
-         -
-  </Text>
-  </TouchableOpacity>
 
-
-
-    <View style={styles.botões}>
-    <TouchableOpacity
-    onPress={() => {
-     onVar3PressAdd && onVar3PressAdd();
-    }}
-    >
- <Text style={{
-     fontSize: 19,
-     color: entry.termo1cor,
-     //backgroundColor: "rgba(80,80,80, 0.5)",
-     marginLeft: 10,
-     marginRight: 10,
- }}>
-         {Var3Numero}
-  </Text>
-  </TouchableOpacity>
-  </View>
-  <TouchableOpacity
-    onPress={() => {
-     onVar3PressAdd && onVar3PressAdd();
-    }}
-    >
- <Text style={{
-     fontSize:20,
-     color: "rgba(00,00,00, 1.0)",
-     backgroundColor: "rgba(00,80,00, 0.5)",
-     paddingLeft: 5,
-     paddingRight: 5,
-     marginTop: -5,
- }}>
-         +
-  </Text>
-  </TouchableOpacity>
-  </View>
-
-
-
-
-  <View style={styles.linha}>
-  <View style={styles.details1}>
-<Text style={{
-     fontSize: 19,
-     color: entry.termo1cor,
-     //backgroundColor: "rgba(80,80,80, 0.5)",
-     marginLeft: 10,
-     marginRight: 10,
- }}>
-        {entry.var4text}
-  </Text>
-</View>
-
-<TouchableOpacity
-    onPress={() => {
-     onVar4PressMin && onVar4PressMin();
-    }}
-    >
- <Text style={{
-     fontSize:20,
-     color: "rgba(80,00,00, 1.0)",
-     backgroundColor: "rgba(80,00,00, 0.5)",
-     paddingLeft: 5,
-     paddingRight: 5,
-     marginTop: -5,
- }}>
-         -
-  </Text>
-  </TouchableOpacity>
-
-
-
-  <View style={styles.botões}>
-    <TouchableOpacity
-    onPress={() => {
-     onVar4PressAdd && onVar4PressAdd();
-    }}
-    >
- <Text style={{
-     
-     fontSize: 20,
-     color: entry.termo1cor,
-     //backgroundColor: "rgba(80,80,80, 0.5)",
-     marginLeft: 10,
-     marginRight: 10,
- }}>
-         {Var4Numero}
-  </Text>
-  </TouchableOpacity>
-  </View>
-
-  <TouchableOpacity
-    onPress={() => {
-     onVar4PressAdd && onVar4PressAdd();
-    }}
-    >
- <Text style={{
-     fontSize:20,
-     color: "rgba(00,00,00, 1.0)",
-     backgroundColor: "rgba(00,80,00, 0.5)",
-     paddingLeft: 5,
-     paddingRight: 5,
-     marginTop: -5,
- }}>
-         +
-  </Text>
-  </TouchableOpacity>
-  
-  </View>
-     
          
             </View>
 

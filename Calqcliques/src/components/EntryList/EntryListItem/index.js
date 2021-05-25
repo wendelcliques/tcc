@@ -18,10 +18,7 @@ const EntryListItem = ({entry,
     onEntryPress9,
     onEntryPress10,
 
-    Var1Numero,
-    Var2Numero,
-    Var3Numero,
-    Var4Numero,
+    
 }) => {
     //const [termo1, setTermo1] = useState(entry.termo1);
     //const [termo2, setTermo2] = useState(entry.termo2);
@@ -55,7 +52,7 @@ const EntryListItem = ({entry,
                 color: entry.termo2cor,
                 backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
-                {entry.termo2} {Var1Numero}
+                {entry.termo2} 
             </Text>
             </TouchableOpacity>
             </View>
@@ -71,7 +68,7 @@ const EntryListItem = ({entry,
                  backgroundColor: "rgba(80,80,80, 0.5)",
               
             }} >
-                {entry.termo3} {Var2Numero}
+                {entry.termo3} 
             </Text>
             </TouchableOpacity>
             </View>
@@ -86,7 +83,7 @@ const EntryListItem = ({entry,
                  color: entry.termo4cor,
                  backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
-                {entry.termo4} {Var3Numero}
+                {entry.termo4} 
             </Text>
             </TouchableOpacity>
             </View>
@@ -100,7 +97,7 @@ const EntryListItem = ({entry,
                  color: entry.termo5cor,
                  backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
-                {entry.termo5} {Var4Numero}
+                {entry.termo5} 
             </Text>
             </TouchableOpacity>
             </View>
