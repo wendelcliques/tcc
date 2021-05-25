@@ -6,6 +6,7 @@ import useEntries from '../../hooks/useEntries'
 
 import Colors from '../../styles/Colors'
 import TermoModal from '../TermoModal'
+import DesenItem from './DesenItem'
 
 const Desenvolvimento = ({categoria,
     var1numero,
@@ -54,10 +55,10 @@ var4numero,
            
            renderItem={({item, index}) => (
 
-            <Text> </Text>
+            
         
-         /*
-           <EntryListItem 
+         
+           <DesenItem 
             
             entry={item}
 
@@ -110,7 +111,7 @@ var4numero,
 
             />
 
-            */
+            
             
            )}
            />
