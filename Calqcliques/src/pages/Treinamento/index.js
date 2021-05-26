@@ -116,6 +116,10 @@ const [var1text, setVar1text] = useState(legenda.var1text);
 
  let xmin = (-1*var1num);
  let xmax = var1num;
+
+ let arit1 = 2*var1num*var2num;
+
+ let arit2 = var1num*var1num*var4num;
  /*let raioinicial = 5;
 let taxaraio = 1;
 let altinicial = 1;
@@ -126,8 +130,13 @@ let a = 2*raioinicial*raioinicial*taxaalt
 
 let b = 2*raioinicial*taxaraio*altinicial;*/
 
+const desenvolvimento = (categoria === "taxa de variação");
+
+console.log("treinamento:: desenvolvimento", desenvolvimento)
+
 
   return (
+    
     <View style={styles.container}>
        
        <TouchableOpacity
@@ -213,12 +222,24 @@ let b = 2*raioinicial*taxaraio*altinicial;*/
       var3numero={var3num}
       var4numero={var4num}
 
-      
+      arit1={arit1}
+      arit2={arit2}
       />
 
-      <Desenvolvimento 
       
-      />
+       <Desenvolvimento 
+       categoria={categoria}
+       var1numero={var1num}
+       var2numero={var2num}
+       var3numero={var3num}
+       var4numero={var4num}
+ 
+       arit1={arit1}
+       arit2={arit2}
+       
+       />
+
+      
       <ExplicaT 
       categoria={categoria}
       />
@@ -240,6 +261,7 @@ let b = 2*raioinicial*taxaraio*altinicial;*/
 
       />
     </View>
+    
   )
 }
 

@@ -9,8 +9,18 @@ import useEntries from '../../hooks/useEntries'
 import Colors from '../../styles/Colors'
 import TermoModal from '../TermoModal'
 
+import Desenvolvimento from '../Desenvolvimento'
+
 
 const EntryList = ({categoria,
+
+    var1numero,
+    var2numero,
+    var3numero,
+    var4numero,
+
+    arit1,
+    arit2,
  
 }) => {
     const navigation = useNavigation();
@@ -58,7 +68,13 @@ const EntryList = ({categoria,
             
             entry={item}
 
-            
+            var1numero={var1numero}
+            var2numero={var2numero}
+            var3numero={var3numero}
+            var4numero={var4numero}
+        
+            arit1={arit1}
+            arit2={arit2}
 
 
             onEntryPress={ () => {
@@ -111,6 +127,12 @@ const EntryList = ({categoria,
             
            )}
            />
+
+
+
+
+
+
 
            <TermoModal 
            isVisible={modalVisible}

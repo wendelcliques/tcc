@@ -20,6 +20,29 @@ export const getEntries = async (categoria) => {
     return entries;
 };
 
+
+
+export const getEntries1 = async (categoria) => {
+    let querySnapshot;
+    querySnapshot = await firestore()
+    .collection('entries1')
+    .where('categoria', '==', categoria? categoria : "Bem vindo")
+    .orderBy('order')
+    .get();
+
+    let entries1 = querySnapshot.docs.map(documentSnapshot => {
+        return {...documentSnapshot.data(), id: documentSnapshot.id};
+    });
+
+    console.log('getEntry :: valor1: ', JSON.stringify(entries1))
+    console.log('getEntry:: categoria', categoria);
+    ;
+
+    return entries1;
+};
+
+
+
 export const addEntry = async entry => {
     let data = {};
     console.log('addEntry :: valor: ', JSON.stringify(entry));

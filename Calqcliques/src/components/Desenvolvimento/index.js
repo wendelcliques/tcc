@@ -13,10 +13,15 @@ const Desenvolvimento = ({categoria,
 var2numero,
 var3numero,
 var4numero,
+
+arit1,
+arit2,
 }) => {
 
     const navigation = useNavigation();
-    const [entries] = useEntries(categoria);
+    const [entries1] = useEntries(categoria);
+
+    console.log("desenvol...:: entries1", JSON.stringify(entries1));
 
     const [modalVisible, setModalVisible] = useState(false);
     const [termo1d, setTermo1d] = useState();
@@ -48,9 +53,12 @@ var4numero,
 
     return (
         <View>
-            <Text>Substituindo as variáveis por valores:</Text>
+           
+
+
+
             <FlatList
-           data={entries}
+           data={entries1}
            keyExtractor={item => item.id}
            
            renderItem={({item, index}) => (
@@ -62,7 +70,13 @@ var4numero,
             
             entry={item}
 
+            var1numero={var1numero}
+            var2numero={var2numero}
+            var3numero={var3numero}
+            var4numero={var4numero} 
             
+            arit1={arit1}
+            arit2={arit2}
 
 
             onEntryPress={ () => {
