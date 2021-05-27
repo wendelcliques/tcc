@@ -20,6 +20,15 @@ const EntrySummary = ({categoria,
 var2numero,
 var3numero,
 var4numero,
+
+xminmeio,
+    xmaxmeio,
+    yminmeio,
+    ymaxmeio,
+
+    xtaxa,
+
+desenvolvimento,
 }) => {
     //const [xa, setXa] = useState(var1numero);
 let y1 = Math.sin(0.01);
@@ -28,24 +37,26 @@ let y3 = Math.sin(0);
 let y4 = Math.sin(5);
 let y5 = Math.sin(10);
     const data1 = [
-        {x: var1numero, y: -20 },
+        {x: xtaxa, y: 0 },
         //{x: -1, y: 0 },
         //{x: 8, y: 13 },
 //{x: 9, y: 11.5 },
-        {x: 10, y: 12 }
+        {x: var1numero, y: ymax }
         ]
 
+
+       
         const data2 = [
             {x: xmin, y: ymin },
-            //{x: -1, y: 10 },
+            {x: xminmeio, y: yminmeio},
            {x: x1 , y: 0 },
            {x: xv , y: yv },
             {x: x2 , y: 0 },
-            //{x: 8, y: 12 },
+            {x: xmaxmeio, y: ymaxmeio },
            // {x: 9, y: 13.5 },
             {x: xmax, y: ymax }
             ]
-
+            
 
 let raioinicial = 5;
 let taxaraio = 1;
@@ -81,7 +92,18 @@ console.log("grafico :: ymax", ymax);
     return (
         <Container>
         <View>
-            <EntrySummaryChart data1={data1} data2={data2} />
+
+            {desenvolvimento && (
+            <EntrySummaryChart 
+            
+            data1={data1} 
+            
+            data2={data2}
+            
+            
+            />
+
+            )}
         </View>
         </Container>
     )

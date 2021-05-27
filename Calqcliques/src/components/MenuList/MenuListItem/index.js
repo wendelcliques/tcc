@@ -44,7 +44,7 @@ const MenuListItem = ({entry,
            <View style={styles.linha}>
              <View style={styles.details1}>
 <Text style={{
-     fontSize: 19,
+     fontSize: 15,
      color: entry.termo1cor,
      //backgroundColor: "rgba(80,80,80, 0.5)",
      marginLeft: 10,
@@ -79,7 +79,7 @@ const MenuListItem = ({entry,
     }}
     >
  <Text style={{
-     fontSize: 19,
+     fontSize: 15,
      color: entry.termo1cor,
      //backgroundColor: "rgba(80,80,80, 0.5)",
      marginLeft: 10,
@@ -113,7 +113,7 @@ const MenuListItem = ({entry,
   <View style={styles.linha}>
   <View style={styles.details1}>
 <Text style={{
-     fontSize: 19,
+     fontSize: 15,
      color: entry.termo1cor,
      //backgroundColor: "rgba(80,80,80, 0.5)",
      marginLeft: 10,
@@ -150,7 +150,7 @@ const MenuListItem = ({entry,
     >
  <Text style={{
      
-     fontSize: 20,
+     fontSize: 15,
      color: entry.termo1cor,
      //backgroundColor: "rgba(80,80,80, 0.5)",
      marginLeft: 10,
@@ -190,7 +190,7 @@ const MenuListItem = ({entry,
            <View style={styles.linha}>
             <View style={styles.details1}>
            <Text style={{
-                fontSize: 19,
+                fontSize: 15,
                 color: entry.termo1cor,
                 //backgroundColor: "rgba(80,80,80, 0.5)",
                 marginLeft: 10,
@@ -228,7 +228,7 @@ const MenuListItem = ({entry,
                }}
                >
             <Text style={{
-                fontSize: 19,
+                fontSize: 15,
                 color: entry.termo1cor,
                 //backgroundColor: "rgba(80,80,80, 0.5)",
                 marginLeft: 10,
@@ -302,7 +302,7 @@ const MenuListItem = ({entry,
                >
                    
             <Text style={{
-                fontSize: 19,
+                fontSize: 15,
                 color: entry.termo1cor,
                 //backgroundColor: "rgba(80,80,80, 0.5)",
                 marginLeft: 10,

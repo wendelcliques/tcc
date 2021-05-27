@@ -26,11 +26,12 @@ const Menu = ({
     onVar4PressAddd,
     onVar4PressMinn,
 
+    desenvolvimento,
 
 }) => {
 
        
-
+const desenvolvimentomenu = desenvolvimento;
         const onCategoryPress = () => {
            // onClosePress();
         };
@@ -76,7 +77,7 @@ const points = () => {
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
             
-
+{desenvolvimentomenu && (
 <SvgCone 
 
 
@@ -86,6 +87,7 @@ var3numero={var3numero}
 var4numero={var4numero}
 
 />
+)}
             
           
             <MenuList 
@@ -102,6 +104,8 @@ var4numero={var4numero}
             var2Numero={var2numero}
             var3Numero={var3numero}
             var4Numero={var4numero}
+
+            desenvolvimento={desenvolvimento}
             
             />
 
