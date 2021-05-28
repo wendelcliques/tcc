@@ -18,7 +18,7 @@ const AppScreens = () => {
     return (
         <Stack.Navigator
             screenOptions={{headerShown: false}}
-            initialRouteName={'SignIn'}
+            initialRouteName={'Treinamento'}
             //initialRouteName={logged? 'Welcome' : 'SignIn}
             >
             <Stack.Screen name="SignIn" component={SignIn} />

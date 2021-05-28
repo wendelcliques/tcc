@@ -43,10 +43,11 @@ let y5 = Math.sin(10);
 //{x: 9, y: 11.5 },
         {x: var1numero, y: ymax }
         ]
+let data2 = []
 
-
-       
-        const data2 = [
+       if (desenvolvimento == true) {
+         data2 = [
+            
             {x: xmin, y: ymin },
             {x: xminmeio, y: yminmeio},
            {x: x1 , y: 0 },
@@ -57,7 +58,20 @@ let y5 = Math.sin(10);
             {x: xmax, y: ymax }
             ]
             
+        } else {
+             data2 = [
+            
+                {x: xmin, y: ymin },
+                {x: xminmeio, y: yminmeio},
+               {x: x1 , y: 0 },
+               {x: xv , y: yv },
+                {x: x2 , y: 0 },
+                {x: xmaxmeio, y: ymaxmeio },
+                {x: 9, y: 13.5 },
+                {x: xmax, y: ymax }
+                ]
 
+        }
 let raioinicial = 5;
 let taxaraio = 1;
 let altinicial = 1;

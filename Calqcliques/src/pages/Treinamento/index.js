@@ -11,6 +11,7 @@ import ExplicaT from '../../components/ExplicaT'
 import EntrySummary from '../../components/EntrySummary'
 import MenuModal from '../../components/MenuModal'
 import Desenvolvimento from '../../components/Desenvolvimento'
+import Ondas from '../../components/Ondas'
 
 
 
@@ -137,7 +138,7 @@ const [var1text, setVar1text] = useState(var1textc);
  let dtaxa = (2*var1num);
 
 
- let xtaxa = ymax/(var1num*10);
+ let xtaxa = var1num/2;
  let xminmeio = 0.5*xmin;
  let xmaxmeio = 0.5*xmax;
 
@@ -171,6 +172,8 @@ let a = 2*raioinicial*raioinicial*taxaalt
 let b = 2*raioinicial*taxaraio*altinicial;*/
 
 const desenvolvimento = (categoria === "taxa de variação");
+
+const ondas = (categoria === "ondas");
 
 console.log("treinamento:: desenvolvimento", desenvolvimento)
 
@@ -282,6 +285,10 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
        pmdas={pmdas}
        
        />
+       )}
+
+       {ondas && (
+         <Ondas />
        )}
 
       
