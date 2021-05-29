@@ -107,6 +107,10 @@ const [var1text, setVar1text] = useState(var1textc);
     const onOpenPress = () => {
       setModalVisible1(true);
     }
+
+    const onModoPress = () => {
+      () => navigation.navigate('Aventura')
+    }
     const onCategoryPress = item => {
       setCategoria(item.name);
       setModalVisible1(false);
@@ -193,6 +197,7 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
             
 
       <Menu
+      onModoPress={ () => navigation.navigate('Aventura')}
 
       onMenuPress={onOpenPress}
       onModalClose={modalVisible}

@@ -11,7 +11,10 @@ import {
 
   import EntryList from '../../components/EntryList';
 
-const Aventura = () => {
+  import Menu from '../../components/Menu'
+  import MenuCentral from '../../components/ExplicaT/MenuCentral'
+
+const Aventura = ({navigation}) => {
     const [received, setReceived] = useState([]);
     const [staged, setStaged] = useState([]);
     const [staged1, setStaged1] = useState([]);
@@ -37,6 +40,14 @@ const Aventura = () => {
 
 console.log("Aventura :: recieved", JSON.stringify(received));
     return (
+      <>
+      <Menu 
+       onModoPress={ () => navigation.navigate('Treinamento')}
+      
+      />
+
+      <MenuCentral />
+
         <DraxProvider>
         <View style={styles.container}>
         <DraxView
@@ -47,7 +58,8 @@ console.log("Aventura :: recieved", JSON.stringify(received));
             const payload = receivingDrag && receivingDrag.payload;
             return (
               <>
-                <Text>Receiving Zone</Text>
+                <Text>Derive a função:</Text>
+                <Text>G(x) = sen(x²)</Text>
                 <Text style={styles.incomingPayload}>{payload || '-'}</Text>
                 <Text style={styles.received}>{received.join(' ')}</Text>
                 <Text style={styles.received}>{staged.join(' ')}</Text>
@@ -128,20 +140,144 @@ console.log("Aventura :: recieved", JSON.stringify(received));
             draggingStyle={styles.dragging}
             dragReleasedStyle={styles.dragging}
             hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'R'}
+            dragPayload={'G(x) = '}
             longPressDelay={0}
           >
-            <Text>Red</Text>
+            <Text>G(x) = </Text>
           </DraxView>
           <DraxView
             style={[styles.centeredContent, styles.draggableBox, styles.green]}
             draggingStyle={styles.dragging}
             dragReleasedStyle={styles.dragging}
             hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'G'}
+            dragPayload={"G'(x) = "}
             longPressDelay={0}
           >
-            <Text>Green</Text>
+            <Text>G'(x) =</Text>
+          </DraxView>
+          <DraxView
+              style={[styles.centeredContent, styles.draggableBox, styles.blue]}
+              draggingStyle={styles.dragging}
+              dragReleasedStyle={styles.dragging}
+              hoverDraggingStyle={styles.hoverDragging}
+              dragPayload={'v(x) = '}
+              longPressDelay={0}
+            >
+              <Text>v(x) = </Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={"v'(x) = "}
+            longPressDelay={0}
+          >
+            <Text>v'(x) = </Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'cos(x²)'}
+            longPressDelay={0}
+          >
+            <Text>cos(x²)</Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'sen(u)'}
+            longPressDelay={0}
+          >
+            <Text>sen(u)</Text>
+          </DraxView>
+        </View>
+        <View style={styles.palette}>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.red]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'u(x) = '}
+            longPressDelay={0}
+          >
+            <Text>u(x) = </Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.green]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={"u'(x) = "}
+            longPressDelay={0}
+          >
+            <Text>u'(x) =</Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.blue]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'x² '}
+            longPressDelay={0}
+          >
+            <Text>x² </Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'cos(u)'}
+            longPressDelay={0}
+          >
+            <Text>cos(u)</Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'2x'}
+            longPressDelay={0}
+          >
+            <Text>2x</Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'Y'}
+            longPressDelay={0}
+          >
+            <Text>Yellow</Text>
+          </DraxView>
+        </View>
+        <View style={styles.palette}>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.red]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'G(x) = '}
+            longPressDelay={0}
+          >
+            <Text>G(x) = </Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.green]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={"G'(x) = "}
+            longPressDelay={0}
+          >
+            <Text>G'(x) =</Text>
           </DraxView>
           <DraxView
             style={[styles.centeredContent, styles.draggableBox, styles.blue]}
@@ -163,6 +299,26 @@ console.log("Aventura :: recieved", JSON.stringify(received));
           >
             <Text>Yellow</Text>
           </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'Y'}
+            longPressDelay={0}
+          >
+            <Text>Yellow</Text>
+          </DraxView>
+          <DraxView
+            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
+            draggingStyle={styles.dragging}
+            dragReleasedStyle={styles.dragging}
+            hoverDraggingStyle={styles.hoverDragging}
+            dragPayload={'Y'}
+            longPressDelay={0}
+          >
+            <Text>Yellow</Text>
+          </DraxView>
         </View>
 
 <TouchableOpacity 
@@ -172,6 +328,7 @@ onPress={() => {onPlinha()}}
             </TouchableOpacity>
         </View>
         </DraxProvider>
+        </>
     )
 }
 
@@ -179,7 +336,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 12,
-      paddingTop: 40,
+      paddingTop: 10,
       justifyContent: 'space-evenly',
     },
     centeredContent: {
@@ -187,7 +344,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     receivingZone: {
-      height: 400,
+      height: 380,
       borderRadius: 10,
     },
     receiving: {
@@ -207,9 +364,9 @@ const styles = StyleSheet.create({
       justifyContent: 'space-evenly',
     },
     draggableBox: {
-      width: 60,
-      height: 60,
-      borderRadius: 10,
+      width: 50,
+      height: 20,
+      borderRadius: 5,
     },
     green: {
       backgroundColor: '#aaffaa',

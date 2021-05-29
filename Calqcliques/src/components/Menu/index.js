@@ -11,6 +11,7 @@ import SvgCone from '../SvgCone'
 
 
 const Menu = ({
+    onModoPress,
     onMenuPress,
     legenda,
     var1numero,
@@ -73,9 +74,11 @@ const points = () => {
         onPressActionButton={
             onMenuPress
          } // recebe o botão do container e seta true o modal visible do MenuModal
+         onModoPress={onModoPress}
         >
         <View style={{backgroundcolor: "red", 
         flexDirection: 'row'}}>
+            
             
 {desenvolvimentomenu && (
 <SvgCone 
