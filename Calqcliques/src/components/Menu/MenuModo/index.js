@@ -27,7 +27,7 @@ const MenuModo = ({onModoPress, menumodo}) => {
             }}>
             <TouchableOpacity
                onPress={() => {
-                   onModoPress && onModoPress(modo);
+                   onModoPress && onModoPress(menumodo);
 
                   
                    //setModalVisible(true);

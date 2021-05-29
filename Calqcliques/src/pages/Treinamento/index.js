@@ -119,6 +119,16 @@ const [var1text, setVar1text] = useState(var1textc);
       setModalVisible1(false);
     }
 
+    const onMenuCentralPress = () => {
+      setCategoria("Bem vindo");
+    }
+    const onMenuCentralPress1 = () => {
+      setCategoria("taxa de variação");
+    }
+
+    const onMenuCentralPress2 = () => {
+      setCategoria("ondas");
+    }
 
 
   let taxaaltura = var4num === 0 ? 0.00000000001 : var4num;
@@ -303,6 +313,10 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
       
       <ExplicaT 
       categoria={categoria}
+
+      onMenuCentralPress={onMenuCentralPress}
+    onMenuCentralPress1={onMenuCentralPress1}
+    onMenuCentralPress2={onMenuCentralPress2}
       />
       <EntrySummary 
     var1numero={var1num}

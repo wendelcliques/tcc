@@ -1,7 +1,11 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-const MenuCentral = () => {
+const MenuCentral = ({
+    onMenuCentralPress,
+    onMenuCentralPress1,
+    onMenuCentralPress2,
+}) => {
     return (
         <View style={{
             alignContent: 'center',
@@ -26,9 +30,9 @@ const MenuCentral = () => {
             }}>
             <TouchableOpacity
                onPress={() => {
-                   //onEntryPress && onEntryPress();
-                   setTermo1d(vT);
-                   setModalVisible(true);
+                onMenuCentralPress && onMenuCentralPress("Bem vindo");
+                   //setTermo1d(vT);
+                   //setModalVisible(true);
                }}
                >
             <Text style={{
@@ -52,9 +56,9 @@ marginHorizontal: 20,
 }}>
             <TouchableOpacity
                onPress={() => {
-                   //onEntryPress && onEntryPress();
-                   setTermo1d(tombo);
-                   setModalVisible(true);
+                   onMenuCentralPress1 && onMenuCentralPress1("Taxa de variação");
+                   //setTermo1d(tombo);
+                   //setModalVisible(true);
                }}
                >
             <Text style={{
@@ -77,9 +81,9 @@ marginHorizontal: 20,
 }}>
             <TouchableOpacity
                onPress={() => {
-                  // onEntryPress && onEntryPress();
-                   setTermo1d(raioini);
-                   setModalVisible(true);
+                onMenuCentralPress2 && onMenuCentralPress2("Ondas");
+                   //setTermo1d(raioini);
+                   //setModalVisible(true);
                }}
                >
             <Text style={{

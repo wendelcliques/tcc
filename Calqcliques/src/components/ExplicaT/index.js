@@ -8,13 +8,22 @@ import MenuCentral from './MenuCentral'
 
 import useEntries from '../../hooks/useEntries'
 
-const ExplicaT = ({categoria}) => {
+const ExplicaT = ({categoria,
+    onMenuCentralPress,
+    onMenuCentralPress1,
+    onMenuCentralPress2,
+}) => {
     const [entries] = useEntries(categoria);
     return (
         <Container 
         title="Explicação Teórica">
         <View>
-            <MenuCentral />
+            <MenuCentral 
+            onMenuCentralPress={onMenuCentralPress}
+
+            onMenuCentralPress1={onMenuCentralPress1}
+            onMenuCentralPress2={onMenuCentralPress2}
+            />
             <ExplicaList data={entries} />
         </View>
         </Container>
