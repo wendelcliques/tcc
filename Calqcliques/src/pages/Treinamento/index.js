@@ -39,6 +39,9 @@ const Treinamento = ({navigation}) => {
     let var4textc = "(h'(t)): ";
     let var4numc = 2;
 
+
+const [menumodo, setMenumodo] = useState("Modo Treinamento");
+
 const [legendas, setLegendas] = useState([]);
 const [var1text, setVar1text] = useState(var1textc);
     const [var1num, setVar1num] = useState(var1numc);
@@ -211,6 +214,7 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
       var4numero={var4num}
 
       desenvolvimento={desenvolvimento}
+      menumodo={menumodo}
 
 // variáveis e botões são enviadas da tela treinamento 
 // para a tela menu. então são enviadas diretamente para

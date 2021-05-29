@@ -10,6 +10,7 @@ const Container = ({
     children,
     onPressActionButton,
     onModoPress,
+    menumodo,
 }) => {
 
 const modo = (title === "Menu");
@@ -23,7 +24,10 @@ const modo = (title === "Menu");
             </TouchableOpacity>
 {modo && (
             <MenuModo 
-            onModoPress={onModoPress}/>
+            onModoPress={onModoPress}
+            menumodo={menumodo}
+            
+            />
             )}
             </View>
             {children}

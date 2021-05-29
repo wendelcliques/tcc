@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-const MenuModo = ({onModoPress}) => {
+const MenuModo = ({onModoPress, menumodo}) => {
 
-const [modo, setModo] = useState("Modo Treinamento")
+
 
     return (
         <View >
@@ -29,7 +29,7 @@ const [modo, setModo] = useState("Modo Treinamento")
                onPress={() => {
                    onModoPress && onModoPress(modo);
 
-                   modo === "Modo Treinamento" ? setModo("Modo Aventura") : setModo("Modo Treinamento") ;
+                  
                    //setModalVisible(true);
                }}
                >
@@ -39,7 +39,7 @@ const [modo, setModo] = useState("Modo Treinamento")
                 backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
 
-                {modo}
+                {menumodo}
              </Text>
              </TouchableOpacity>
              </View>
