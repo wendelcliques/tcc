@@ -40,7 +40,9 @@ const Treinamento = ({navigation}) => {
     let var4numc = 2;
 
 
-const [menumodo, setMenumodo] = useState("Modo Treinamento");
+//let [menumodo, setMenumodo] = useState("Modo Treinamento");
+
+let menumodo = "Modo Treinamento";
 
 const [legendas, setLegendas] = useState([]);
 const [var1text, setVar1text] = useState(var1textc);
@@ -210,7 +212,10 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
             
 
       <Menu
-      onModoPress={ () => navigation.navigate('Aventura')}
+      onModoPress={ 
+        menumodo = "Modo Aventura",
+        
+        () => navigation.navigate('Aventura')}
 
       onMenuPress={onOpenPress}
       onModalClose={modalVisible}
@@ -272,6 +277,14 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
 
 
       />
+
+<ExplicaT 
+      categoria={categoria}
+
+      onMenuCentralPress={onMenuCentralPress}
+    onMenuCentralPress1={onMenuCentralPress1}
+    onMenuCentralPress2={onMenuCentralPress2}
+      />
       <EntryList 
       categoria={categoria}
       var1numero={var1num}
@@ -311,13 +324,7 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
        )}
 
       
-      <ExplicaT 
-      categoria={categoria}
-
-      onMenuCentralPress={onMenuCentralPress}
-    onMenuCentralPress1={onMenuCentralPress1}
-    onMenuCentralPress2={onMenuCentralPress2}
-      />
+     
       <EntrySummary 
     var1numero={var1num}
     var2numero={var2num}

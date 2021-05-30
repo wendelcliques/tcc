@@ -49,7 +49,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(vT);
+                   setTermo1d("G(x) se refere à função G que será derivada em função de x");
                    setModalVisible(true);
                }}
                >
@@ -66,13 +66,19 @@ const Ondas = () => {
 
              <View>
             <TouchableOpacity
+            style={{
+               // marginLeft: 5,
+                color: "red", //entries.termo1dcor,
+                
+            }}
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(tombo);
+                   setTermo1d("sen é a função externa dessa função composta, pois o seno está sendo aplicado em outra função e não apenas em uma variável.");
                    setModalVisible(true);
                }}
                >
             <Text style={{
+                
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
                 backgroundColor: "rgba(80,80,80, 0.5)",
@@ -86,7 +92,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                   setTermo1d(raioini);
+                   setTermo1d("x² é a função interna dessa função composta, pois é um x elevado ao quadrado, e a tabela de derivadas prevê a derivação de seno de x, não seno de x mais alguma cois, ou seno de x elevado a alguma coisa, ou qualquer outra coisa a mais aplicada em x.");
                    setModalVisible(true);
                }}
                >
@@ -108,7 +114,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(raiotaxa);
+                   setTermo1d("sen é a função externa dessa função composta, pois o seno está sendo aplicado em outra função e não apenas em uma variável.");
                    setModalVisible(true);
                }}
                >
@@ -148,7 +154,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(vT);
+                   setTermo1d("u(x) é a função interna dessa função composta. É importante fazer anotações separando as funções compostas a serem derivadas para que não corra o risco de se perder durante a derivação.");
                    setModalVisible(true);
                }}
                >
@@ -167,7 +173,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(pmdas);
+                   setTermo1d("x² é a função interna dessa função composta.");
                    setModalVisible(true);
                }}
                >
@@ -209,7 +215,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(vT);
+                   setTermo1d("v(u) é a função externa dessa função composta. É importante fazer anotações separando as funções compostas a serem derivadas para que não corra o risco de se perder durante a derivação.");
                    setModalVisible(true);
                }}
                >
@@ -308,6 +314,7 @@ const Ondas = () => {
   }}
   >
 <Text style={{
+    marginLeft: 5,
    fontSize:15,
    color: "black", //entries.termo1dcor,
    backgroundColor: "rgba(80,80,80, 0.5)",
@@ -375,6 +382,7 @@ const Ondas = () => {
                }}
                >
             <Text style={{
+                marginLeft: 5,
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
                 backgroundColor: "rgba(80,80,80, 0.5)",
@@ -463,6 +471,7 @@ const Ondas = () => {
                }}
                >
             <Text style={{
+                marginLeft: 5,
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
                 backgroundColor: "rgba(80,80,80, 0.5)",
@@ -548,6 +557,7 @@ const Ondas = () => {
                }}
                >
             <Text style={{
+                marginLeft: 5,
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
                 backgroundColor: "rgba(80,80,80, 0.5)",

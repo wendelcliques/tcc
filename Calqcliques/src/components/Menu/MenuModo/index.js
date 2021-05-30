@@ -9,10 +9,8 @@ const MenuModo = ({onModoPress, menumodo}) => {
         <View >
 
 <View style={{
-     alignContent: 'flex-end',
-     justifyContent: 'flex-end',
-     alignItems: 'flex-end',
-               flexDirection: 'row', 
+     
+              // flexDirection: 'row', 
                //paddingLeft: 10,
                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
@@ -23,7 +21,8 @@ const MenuModo = ({onModoPress, menumodo}) => {
                 borderRadius: 5,
                 color: "white", //entries.termo1dcor,
                 backgroundColor: "rgba(80,80,80, 0.5)",
-                marginHorizontal: 20,
+                marginHorizontal: 130,
+               // flexDirection: 'end',
             }}>
             <TouchableOpacity
                onPress={() => {

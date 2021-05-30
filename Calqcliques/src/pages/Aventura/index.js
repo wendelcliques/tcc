@@ -14,6 +14,9 @@ import {
   import Menu from '../../components/Menu'
   import MenuCentral from '../../components/ExplicaT/MenuCentral'
 
+  import Drax from '../../components/Drax'
+  import DraxTaxa from '../../components/DraxTaxa'
+
 const Aventura = ({navigation}) => {
     const [received, setReceived] = useState([]);
     const [staged, setStaged] = useState([]);
@@ -25,6 +28,12 @@ const Aventura = ({navigation}) => {
     const [staged6, setStaged6] = useState([]);
     const [staged7, setStaged7] = useState([]);
     const [linha, setLinha] = useState(1);
+
+    const [categoria, setCategoria] = useState("Bem vindo");
+    const desenvolvimento = (categoria === "taxa de variação");
+
+    const ondas = (categoria === "ondas");
+
 
     const onPlinha = () => {
       setLinha(linha => linha + 1);
@@ -39,14 +48,43 @@ const Aventura = ({navigation}) => {
     console.log("Aventura :: staged3", staged3);
 
 console.log("Aventura :: recieved", JSON.stringify(received));
+
+let menumodo = "Modo Trinemento";
+
+
+const onMenuCentralPress = () => {
+  setCategoria("Bem vindo");
+}
+
+const onMenuCentralPress1 = () => {
+  setCategoria("taxa de variação");
+}
+
+const onMenuCentralPress2 = () => {
+  setCategoria("ondas");
+}
+
+
     return (
       <>
       <Menu 
-       onModoPress={ () => navigation.navigate('Treinamento')}
+      menumodo={menumodo}
+       onModoPress={ 
+         
+         
+        () => navigation.navigate('Treinamento')}
       
       />
 
-      <MenuCentral />
+      
+
+      <MenuCentral 
+      
+      onMenuCentralPress={onMenuCentralPress}
+
+            onMenuCentralPress1={onMenuCentralPress1}
+            onMenuCentralPress2={onMenuCentralPress2}
+      />
 
         <DraxProvider>
         <View style={styles.container}>
@@ -57,9 +95,13 @@ console.log("Aventura :: recieved", JSON.stringify(received));
             const receivingDrag = viewState && viewState.receivingDrag;
             const payload = receivingDrag && receivingDrag.payload;
             return (
+
+              
               <>
+
                 <Text>Derive a função:</Text>
                 <Text>G(x) = sen(x²)</Text>
+                
                 <Text style={styles.incomingPayload}>{payload || '-'}</Text>
                 <Text style={styles.received}>{received.join(' ')}</Text>
                 <Text style={styles.received}>{staged.join(' ')}</Text>
@@ -131,200 +173,22 @@ console.log("Aventura :: recieved", JSON.stringify(received));
           }
           }}
         />
+{ondas && (
+<Drax />
+)}
+
+{desenvolvimento && (
+  <DraxTaxa />
+)}
 
 
 
-<View style={styles.palette}>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.red]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'G(x) = '}
-            longPressDelay={0}
-          >
-            <Text>G(x) = </Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.green]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={"G'(x) = "}
-            longPressDelay={0}
-          >
-            <Text>G'(x) =</Text>
-          </DraxView>
-          <DraxView
-              style={[styles.centeredContent, styles.draggableBox, styles.blue]}
-              draggingStyle={styles.dragging}
-              dragReleasedStyle={styles.dragging}
-              hoverDraggingStyle={styles.hoverDragging}
-              dragPayload={'v(x) = '}
-              longPressDelay={0}
-            >
-              <Text>v(x) = </Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={"v'(x) = "}
-            longPressDelay={0}
-          >
-            <Text>v'(x) = </Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'cos(x²)'}
-            longPressDelay={0}
-          >
-            <Text>cos(x²)</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'sen(u)'}
-            longPressDelay={0}
-          >
-            <Text>sen(u)</Text>
-          </DraxView>
-        </View>
-        <View style={styles.palette}>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.red]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'u(x) = '}
-            longPressDelay={0}
-          >
-            <Text>u(x) = </Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.green]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={"u'(x) = "}
-            longPressDelay={0}
-          >
-            <Text>u'(x) =</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.blue]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'x² '}
-            longPressDelay={0}
-          >
-            <Text>x² </Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'cos(u)'}
-            longPressDelay={0}
-          >
-            <Text>cos(u)</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'2x'}
-            longPressDelay={0}
-          >
-            <Text>2x</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'Y'}
-            longPressDelay={0}
-          >
-            <Text>Yellow</Text>
-          </DraxView>
-        </View>
-        <View style={styles.palette}>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.red]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'G(x) = '}
-            longPressDelay={0}
-          >
-            <Text>G(x) = </Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.green]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={"G'(x) = "}
-            longPressDelay={0}
-          >
-            <Text>G'(x) =</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.blue]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'B'}
-            longPressDelay={0}
-          >
-            <Text>Blue</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'Y'}
-            longPressDelay={0}
-          >
-            <Text>Yellow</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'Y'}
-            longPressDelay={0}
-          >
-            <Text>Yellow</Text>
-          </DraxView>
-          <DraxView
-            style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            dragPayload={'Y'}
-            longPressDelay={0}
-          >
-            <Text>Yellow</Text>
-          </DraxView>
-        </View>
 
 <TouchableOpacity 
+ style={[styles.centeredContent, styles.draggableBox, styles.red]}
 onPress={() => {onPlinha()}}
 >
-            <Text>¬ {linha}</Text>
+            <Text>Enter {linha}</Text>
             </TouchableOpacity>
         </View>
         </DraxProvider>
@@ -336,8 +200,8 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 12,
-      paddingTop: 10,
-      justifyContent: 'space-evenly',
+      paddingTop: 5,
+      //justifyContent: 'space-evenly',
     },
     centeredContent: {
       justifyContent: 'center',
@@ -345,7 +209,7 @@ const styles = StyleSheet.create({
     },
     receivingZone: {
       height: 380,
-      borderRadius: 10,
+      borderRadius: 5,
     },
     receiving: {
       borderColor: 'red',
