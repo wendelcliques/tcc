@@ -44,11 +44,13 @@ const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 1,
         borderColor: 'rgba(255, 255, 255, 0.2)',
-        margin: 5,
-        padding: 8,
+        margin: 3,
+        padding: 3,
     },
     topo: {
 flexDirection: 'row',
+
+//backgroundColor: 'red',
     },
     title: {
         fontSize: 13,

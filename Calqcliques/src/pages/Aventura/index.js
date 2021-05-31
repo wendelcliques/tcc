@@ -5,6 +5,7 @@ import {
     TouchableOpacity,
     StyleSheet,
     FlatList,
+    Alert,
   } from 'react-native';
 
   import { DraxProvider, DraxView } from 'react-native-drax';
@@ -29,6 +30,8 @@ const Aventura = ({navigation}) => {
     const [staged7, setStaged7] = useState([]);
     const [linha, setLinha] = useState(1);
 
+    const [gabl1, setGabl1] = useState(["G'(x) = ", "cos(x²)"]);
+
     const [categoria, setCategoria] = useState("Bem vindo");
     const desenvolvimento = (categoria === "taxa de variação");
 
@@ -36,18 +39,24 @@ const Aventura = ({navigation}) => {
 
 
     const onPlinha = () => {
+      if(received[1] == gabl1[1]) {
+        Alert.alert("Alinha está certa");
+      } else {
+        Alert.alert("Alinha está errada");
+      }
       setLinha(linha => linha + 1);
       
     }
 
     console.log("Aventura :: linha", linha);
     console.log("Aventura :: recieved", received);
+    console.log("Aventura :: gabl1", gabl1);
     console.log("Aventura :: staged", staged);
     console.log("Aventura :: staged1", staged1);
     console.log("Aventura :: staged2", staged2);
     console.log("Aventura :: staged3", staged3);
 
-console.log("Aventura :: recieved", JSON.stringify(received));
+console.log("Aventura :: gabl1", JSON.stringify(received));
 
 let menumodo = "Modo Trinemento";
 
@@ -117,19 +126,25 @@ const onMenuCentralPress2 = () => {
             );
           }}
           onReceiveDragDrop={(event) => {
+            
             if(linha === 1) {
+              //Alert.alert("Alinha está certa");
             setReceived([
               ...received,
               event.dragged.payload || '?',
             ]);
+            
+            if(received === gabl1) {
+              Alert.alert("Alinha está certa");
+            }
           } else if (linha === 2) {
-
+            Alert.alert("Alinha está certa");
             setStaged([
               ...staged,
               event.dragged.payload || '?',
             ]);
           } else if (linha === 3) {
-
+            Alert.alert("Alinha está certa");
             setStaged1([
               ...staged1,
               event.dragged.payload || '?',
@@ -188,6 +203,7 @@ const onMenuCentralPress2 = () => {
  style={[styles.centeredContent, styles.draggableBox, styles.red]}
 onPress={() => {onPlinha()}}
 >
+
             <Text>Enter {linha}</Text>
             </TouchableOpacity>
         </View>
@@ -208,7 +224,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     receivingZone: {
-      height: 380,
+      height: 310,
       borderRadius: 5,
     },
     receiving: {

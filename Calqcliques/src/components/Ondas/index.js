@@ -234,7 +234,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(pmdas);
+                   setTermo1d(" A função de seno está interagindo com outra função ao invés de uma variável, e por isso se torna a função externa dessa função composta. Já que a tabela de derivadas preve a interação de seno com uma variável, a função interna será substituida pela variável u.");
                    setModalVisible(true);
                }}
                >
@@ -253,7 +253,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                    //onEntryPress && onEntryPress();
-                   setTermo1d(pmdas);
+                   setTermo1d("a variável u está sendo utilizada no lugar da função interna x² para ser possivel derivar a função do seno utilizando a tabela de derivação.");
                    setModalVisible(true);
                }}
                >
@@ -288,7 +288,7 @@ const Ondas = () => {
 <TouchableOpacity
   onPress={() => {
      // onEntryPress && onEntryPress();
-     setTermo1d(vT);
+     setTermo1d("Depois que as funções interna e externa da função composta estão definidas, o primeiro passo é derivar a função interna.");
       setModalVisible(true);
   }}
   >
@@ -309,7 +309,7 @@ const Ondas = () => {
 <TouchableOpacity
   onPress={() => {
      // onEntryPress && onEntryPress();
-     setTermo1d(pmdas);
+     setTermo1d("u'(x) indica que a função interna u será derivada em função da variável x.");
       setModalVisible(true);
   }}
   >
@@ -329,7 +329,7 @@ const Ondas = () => {
 <TouchableOpacity
   onPress={() => {
      // onEntryPress && onEntryPress();
-     setTermo1d(pmdas);
+     setTermo1d("A função interna u vale x². Aplicando-se a regra do tombo, desce o expoente e subtrai 1 do expoente original, resultando em 2x.");
       setModalVisible(true);
   }}
   >
@@ -356,7 +356,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(vT);
+                  setTermo1d("O segundo passo da regra da cadeia consiste em derivar a função externa.");
                    setModalVisible(true);
                }}
                >
@@ -377,7 +377,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("v'(u) indica que a função externa v será derivada em função da variável u.");
                    setModalVisible(true);
                }}
                >
@@ -397,7 +397,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("A derivada da função sen u é cos u, conforme a tabela de derivação.");
                    setModalVisible(true);
                }}
                >
@@ -416,7 +416,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("a variável u está sendo utilizada no lugar da função interna x² para ser possivel derivar a função do seno utilizando a tabela de derivação.");
                    setModalVisible(true);
                }}
                >
@@ -445,7 +445,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(vT);
+                  setTermo1d("O terceiro passo da regra da cadeia consiste em multiplicar u'(x) com v'(u).");
                    setModalVisible(true);
                }}
                >
@@ -466,7 +466,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("u'(x) vale 2x.");
                    setModalVisible(true);
                }}
                >
@@ -486,7 +486,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("v'(u) vale cos u.");
                    setModalVisible(true);
                }}
                >
@@ -505,7 +505,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("v'(u) vale cos u.");
                    setModalVisible(true);
                }}
                >
@@ -531,7 +531,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(vT);
+                  setTermo1d("O quarto passo da regra da cadeia consiste em substituir a variável u pela sua função original. ");
                    setModalVisible(true);
                }}
                >
@@ -552,7 +552,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("G'(x) significa que a função composta G foi derivada em função da variável x, tanto na função interna quanto na função externa.");
                    setModalVisible(true);
                }}
                >
@@ -572,7 +572,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("u'(x) vale 2x.");
                    setModalVisible(true);
                }}
                >
@@ -591,7 +591,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("v'(u) vale cos u.");
                    setModalVisible(true);
                }}
                >
@@ -609,7 +609,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("x² é a função interna original que foi substituida pela variável u para o desenvolvimento do exercício.");
                    setModalVisible(true);
                }}
                >
@@ -627,7 +627,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                  setTermo1d(pmdas);
+                  setTermo1d("v'(u) vale cos u.");
                    setModalVisible(true);
                }}
                >

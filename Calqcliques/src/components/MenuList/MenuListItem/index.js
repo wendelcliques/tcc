@@ -45,7 +45,7 @@ const MenuListItem = ({entry,
              <View style={styles.details1}>
 <Text style={{
      fontSize: 15,
-     color: entry.termo1cor,
+     color: "blue", //entry.termo1cor,
      //backgroundColor: "rgba(80,80,80, 0.5)",
      marginLeft: 10,
      marginRight: 10,
@@ -114,7 +114,7 @@ const MenuListItem = ({entry,
   <View style={styles.details1}>
 <Text style={{
      fontSize: 15,
-     color: entry.termo1cor,
+     color: "green", //entry.termo1cor,
      //backgroundColor: "rgba(80,80,80, 0.5)",
      marginLeft: 10,
      marginRight: 10,
@@ -191,7 +191,7 @@ const MenuListItem = ({entry,
             <View style={styles.details1}>
            <Text style={{
                 fontSize: 15,
-                color: entry.termo1cor,
+                color: "red", //entry.termo1cor,
                 //backgroundColor: "rgba(80,80,80, 0.5)",
                 marginLeft: 10,
                 marginRight: 10,
@@ -265,7 +265,7 @@ const MenuListItem = ({entry,
              <View style={styles.details1}>
            <Text style={{
                 fontSize: 15,
-                color: entry.termo1cor,
+                color: "orange", //entry.termo1cor,
                 //backgroundColor: "rgba(80,80,80, 0.5)",
                 marginLeft: 10,
                 marginRight: 10,

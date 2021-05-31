@@ -349,6 +349,7 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
     xtaxa={xtaxa}
 
     desenvolvimento={desenvolvimento}
+    ondas={ondas}
 
       />
     </View>

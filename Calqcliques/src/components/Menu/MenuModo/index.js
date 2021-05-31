@@ -21,7 +21,7 @@ const MenuModo = ({onModoPress, menumodo}) => {
                 borderRadius: 5,
                 color: "white", //entries.termo1dcor,
                 backgroundColor: "rgba(80,80,80, 0.5)",
-                marginHorizontal: 130,
+                marginHorizontal: 100,
                // flexDirection: 'end',
             }}>
             <TouchableOpacity

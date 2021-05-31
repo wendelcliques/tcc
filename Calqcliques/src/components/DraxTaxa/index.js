@@ -43,7 +43,7 @@ const DraxTaxa = () => {
             dragPayload={'r²(t)'}
             longPressDelay={0}
           >
-            <Text>raio²(t) </Text>
+            <Text>r²(t) </Text>
         </DraxView>
         <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
@@ -53,7 +53,7 @@ const DraxTaxa = () => {
           dragPayload={"r'(t)"}
           longPressDelay={0}
         >
-          <Text>taxa do raio</Text>
+          <Text>r'(t) (taxa)</Text>
         </DraxView>
         <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
@@ -63,9 +63,18 @@ const DraxTaxa = () => {
           dragPayload={'h(t)'}
           longPressDelay={0}
         >
-          <Text>altura(t)</Text>
+          <Text>h(t)</Text>
         </DraxView>
-        <DraxView
+       
+      </View>
+
+
+
+
+
+      <View style={styles.palette}>
+
+      <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
           draggingStyle={styles.dragging}
           dragReleasedStyle={styles.dragging}
@@ -73,10 +82,10 @@ const DraxTaxa = () => {
           dragPayload={"h'(t)"}
           longPressDelay={0}
         >
-          <Text>taxa da altura</Text>
+          <Text>h'(t) (taxa)</Text>
         </DraxView>
-      </View>
-      <View style={styles.palette}>
+
+
         <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.red]}
           draggingStyle={styles.dragging}
@@ -117,7 +126,11 @@ const DraxTaxa = () => {
         >
           <Text>cos(u)</Text>
         </DraxView>
-        <DraxView
+        
+      </View>
+      <View style={styles.palette}>
+
+      <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
           draggingStyle={styles.dragging}
           dragReleasedStyle={styles.dragging}
@@ -137,8 +150,7 @@ const DraxTaxa = () => {
         >
           <Text>Yellow</Text>
         </DraxView>
-      </View>
-      <View style={styles.palette}>
+
         <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.red]}
           draggingStyle={styles.dragging}
@@ -169,7 +181,13 @@ const DraxTaxa = () => {
         >
           <Text>Blue</Text>
         </DraxView>
-        <DraxView
+        
+      </View>
+
+
+
+      <View style={styles.palette}>
+      <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
           draggingStyle={styles.dragging}
           dragReleasedStyle={styles.dragging}
@@ -240,9 +258,12 @@ const styles = StyleSheet.create({
       justifyContent: 'space-evenly',
     },
     draggableBox: {
-      width: 50,
+      width: 70,
       height: 20,
       borderRadius: 5,
+      marginBottom: 5,
+      marginTop: 10,
+      marginLeft: 5,
     },
     green: {
       backgroundColor: '#aaffaa',
