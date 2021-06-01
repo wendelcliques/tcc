@@ -4,6 +4,7 @@ import { View, Text } from 'react-native'
 import Container from '../Container'
 
 import EntrySummaryChart from './EntrySummaryChart'
+import EntrySummaryTaxa from './EntrySummaryTaxa'
 
 
 const EntrySummary = ({categoria,
@@ -30,19 +31,31 @@ xminmeio,
 
 desenvolvimento,
 ondas,
+ondas1,
+ondas0press,
+ondas1press,
+ondas2press,
+ondas3press,
 }) => {
     //const [xa, setXa] = useState(var1numero);
+
+
+console.log("ondas1", ondas1);
+
+
 let y1 = Math.sin(0.01);
 let y2 = Math.sin(-5);
 let y3 = Math.sin(0);
 let y4 = Math.sin(5);
 let y5 = Math.sin(10);
+
+
+
+
     const data1 = [
-        {x: xtaxa, y: 0 },
-        //{x: -1, y: 0 },
-        //{x: 8, y: 13 },
-//{x: 9, y: 11.5 },
-        {x: var1numero, y: ymax }
+        {x: 0, y: 0 },
+       
+        {x: 0, y: 0 }
         ]
 let data2 = [{x: 0, y: 0}];
             
@@ -66,6 +79,8 @@ let data2 = [{x: 0, y: 0}];
             
         }
          if (ondas == true) {
+
+            if (ondas1 === "ondas0") {
 
             data3 = [
             
@@ -160,6 +175,10 @@ let data2 = [{x: 0, y: 0}];
                 {x: 88, y: 2*88*Math.cos(88*88) },
                 {x: 89, y: 2*89*Math.cos(89*89) },
                 ]
+            }
+            } 
+            
+            if (ondas1 === "ondas1") {
 
                 data4 = [
             
@@ -254,8 +273,8 @@ let data2 = [{x: 0, y: 0}];
                     {x: 88, y: 100*Math.cos(88*88) },
                     {x: 89, y: 100*Math.cos(89*89) },
                     ]
-
-
+                }
+                    if (ondas1 === "ondas2") {
                     data5 = [
             
                         {x: 0, y: 100*Math.cos(0) },
@@ -350,7 +369,8 @@ let data2 = [{x: 0, y: 0}];
                         {x: 89, y: 100*Math.cos(89) },
                         ]
 
-
+                    }
+                    if (ondas1 === "ondas3") {
                         data6 = [
             
                             {x: 0, y: 2*0*Math.cos(0) },
@@ -485,7 +505,7 @@ console.log("grafico :: ymax", ymax);
         <Container>
         <View>
 
-            
+            {ondas && (
             <EntrySummaryChart 
             
             data1={data1} 
@@ -497,9 +517,24 @@ console.log("grafico :: ymax", ymax);
             data4={data4}
             data5={data5}
             data6={data6}
+
+            ondas0press={ondas0press}
+
+            ondas1press={
+                ondas1press               
+            }
+            ondas2press={ondas2press}
+            ondas3press={ondas3press}
             
             />
+            )}
 
+{desenvolvimento && (
+            <EntrySummaryTaxa 
+            data1={data1}
+            data2={data2}
+            />
+            )}
             
         </View>
         </Container>

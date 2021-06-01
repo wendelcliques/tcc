@@ -3,9 +3,16 @@ import { View, Text, StyleSheet, TouchableOpacity, } from 'react-native'
 
 import { Chart, VerticalAxis, HorizontalAxis, Line } from 'react-native-responsive-linechart'
 
-const EntrySummaryChart = ({data1, data2, data3, data4, data5, data6}) => {
+const EntrySummaryChart = ({data1, data2, data3, data4, data5, data6,
+    ondas0press,
+ondas1press,
+ondas2press,
+ondas3press,
+
+}) => {
     const [a, setA] = useState(4);
     return (
+        
         <View style={{
             //paddingLeft: 20,
             flexDirection: 'row',
@@ -26,12 +33,19 @@ const EntrySummaryChart = ({data1, data2, data3, data4, data5, data6}) => {
                 <Line data={data6} smoothing="cubic-spline" theme={{ stroke: { color: 'blue', width: 1}}} />
             </Chart>
 
-            <View style={{
+            <View>
+
+                <Text> Estudo comparativo:</Text>
+                <View style={{
             flexDirection: 'row',
             paddingLeft: 20,
         }}>
 <Text>2x cos x²</Text>
-<TouchableOpacity>
+<TouchableOpacity
+onPress={() => {
+    ondas0press && ondas0press();
+   }}
+>
     <Text style={{
             //flex: 1,
             //paddingLeft: 20,
@@ -43,6 +57,74 @@ const EntrySummaryChart = ({data1, data2, data3, data4, data5, data6}) => {
 </TouchableOpacity>
             </View>
 
+            <View style={{
+            flexDirection: 'row',
+            paddingLeft: 20,
+        }}>
+<Text>cos x²</Text>
+<TouchableOpacity
+onPress={() => {
+    ondas1press && ondas1press();
+   }}
+>
+    <Text style={{
+            //flex: 1,
+            //paddingLeft: 20,
+            borderWidth: 1,
+            borderRadius: 5,
+            marginLeft: 20,
+    }}
+            >Ativar</Text>
+</TouchableOpacity>
+            </View>
+
+         
+
+
+
+            <View style={{
+            flexDirection: 'row',
+            paddingLeft: 20,
+        }}>
+            <Text>cos x</Text>
+<TouchableOpacity
+onPress={() => {
+    ondas2press && ondas2press();
+   }}
+>
+    <Text style={{
+            //flex: 1,
+            //paddingLeft: 20,
+            borderWidth: 1,
+            borderRadius: 5,
+            marginLeft: 20,
+    }}
+            >Ativar</Text>
+</TouchableOpacity>
+            </View>
+
+            <View style={{
+            flexDirection: 'row',
+            paddingLeft: 20,
+        }}>
+            <Text>2x cos x</Text>
+<TouchableOpacity
+onPress={() => {
+    ondas3press && ondas3press();
+   }}
+>
+    <Text style={{
+            //flex: 1,
+            //paddingLeft: 20,
+            borderWidth: 1,
+            borderRadius: 5,
+            marginLeft: 20,
+    }}
+            >Ativar</Text>
+</TouchableOpacity>
+            </View>
+
+            </View>
 
         </View>
     )

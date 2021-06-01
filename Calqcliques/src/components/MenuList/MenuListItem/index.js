@@ -6,7 +6,7 @@ import {TouchableOpacity,
 
 import Colors from '../../../styles/Colors'
 
-const MenuListItem = ({entry,
+const MenuListItem = ({
     
     onEntryPress,
     onVar1PressAdd, 
@@ -22,6 +22,12 @@ const MenuListItem = ({entry,
     Var2Numero,
     Var3Numero,
     Var4Numero,
+
+
+    var1text,
+var2text,
+var3text,
+var4text,
     
 
 }) => {
@@ -31,6 +37,10 @@ const MenuListItem = ({entry,
     console.log('MenuListItem :: var2num', JSON.stringify(Var2Numero));
     console.log('MenuListItem :: var3num', JSON.stringify(Var3Numero));
     console.log('MenuListItem :: var4num', JSON.stringify(Var4Numero));
+    console.log('MenuListItem :: var1text', JSON.stringify(var1text));
+    console.log('MenuListItem :: var2text', JSON.stringify(var2text));
+    console.log('MenuListItem :: var3text', JSON.stringify(var3text));
+    console.log('MenuListItem :: var4text', JSON.stringify(var4text));
     console.log('MenuListItem :: onPress', onVar1PressAdd);
     console.log('MenuListItem :: onPress 2', onVar2PressAdd);
     console.log('MenuListItem :: onPress 3', JSON.stringify(onVar3PressAdd));
@@ -50,7 +60,7 @@ const MenuListItem = ({entry,
      marginLeft: 10,
      marginRight: 10,
  }}>
-         {entry.var3text}
+         {var3text}
   </Text>
 </View>
 <TouchableOpacity
@@ -119,7 +129,7 @@ const MenuListItem = ({entry,
      marginLeft: 10,
      marginRight: 10,
  }}>
-        {entry.var4text}
+        {var4text}
   </Text>
 </View>
 
@@ -196,7 +206,7 @@ const MenuListItem = ({entry,
                 marginLeft: 10,
                 marginRight: 10,
             }}>
-                    {entry.var1text}
+                    {var1text}
              </Text>
              </View>
            <TouchableOpacity
@@ -271,7 +281,7 @@ const MenuListItem = ({entry,
                 marginRight: 10,
             }} // texto variável 2 
             >
-                    {entry.var2text} 
+                    {var2text} 
              </Text>
              </View>
 

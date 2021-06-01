@@ -19,6 +19,12 @@ const Menu = ({
     var2numero,
     var3numero,
     var4numero,
+    
+var1text,
+var2text,
+var3text,
+var4text,
+
     onVar1PressAddd,
     onVar1PressMinn,
     onVar2PressAddd,
@@ -109,6 +115,11 @@ var4numero={var4numero}
             var2Numero={var2numero}
             var3Numero={var3numero}
             var4Numero={var4numero}
+
+            var1text={var1text}
+    var2text={var2text}
+    var3text={var3text}
+    var4text={var4text}
 
             desenvolvimento={desenvolvimento}
             

@@ -17,6 +17,7 @@ import {
 
   import Drax from '../../components/Drax'
   import DraxTaxa from '../../components/DraxTaxa'
+  import ExDraxOnda from '../../components/ExDraxOnda'
 
 const Aventura = ({navigation}) => {
     const [received, setReceived] = useState([]);
@@ -96,7 +97,11 @@ const onMenuCentralPress2 = () => {
       />
 
         <DraxProvider>
+        
         <View style={styles.container}>
+          {ondas && (
+        <ExDraxOnda />
+        )}
         <DraxView
           style={[styles.centeredContent, styles.receivingZone, styles.magenta]}
           receivingStyle={styles.receiving}
@@ -108,9 +113,8 @@ const onMenuCentralPress2 = () => {
               
               <>
 
-                <Text>Derive a função:</Text>
-                <Text>G(x) = sen(x²)</Text>
                 
+
                 <Text style={styles.incomingPayload}>{payload || '-'}</Text>
                 <Text style={styles.received}>{received.join(' ')}</Text>
                 <Text style={styles.received}>{staged.join(' ')}</Text>

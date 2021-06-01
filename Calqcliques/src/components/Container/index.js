@@ -22,6 +22,7 @@ const modo = (title === "Menu");
             onPress={onPressActionButton}>
             {title && <Text style={styles.title}>{title}</Text>}
             </TouchableOpacity>
+           
 {modo && (
             <MenuModo 
             onModoPress={onModoPress}
@@ -48,7 +49,9 @@ const styles = StyleSheet.create({
         padding: 3,
     },
     topo: {
+        //flex: 1,
 flexDirection: 'row',
+//backgroundColor: 'red',
 
 //backgroundColor: 'red',
     },

@@ -56,10 +56,42 @@ const [var1text, setVar1text] = useState(var1textc);
 
     const [categoria, setCategoria] = useState("Bem vindo");
 
+    const [ondas1, setOndas1] = useState("ondas0");
+
 
     const [modalVisible, setModalVisible] = useState(false);
 
     const [modalVisible1, setModalVisible1] = useState(false);
+    const ondas0press = () => {
+      if (ondas1 === "ondas0"){
+      setOndas1("ondas4");
+      } else {
+        setOndas1("ondas0");
+      }
+    }
+
+    const ondas1press = () => {
+      if (ondas1 === "ondas0"){
+      setOndas1("ondas1");
+      } else {
+        setOndas1("ondas0");
+      }
+    }
+
+    const ondas2press = () => {
+      if (ondas1 === "ondas0"){
+      setOndas1("ondas2");
+      } else {
+        setOndas1("ondas0");
+      }
+    }
+    const ondas3press = () => {
+      if (ondas1 === "ondas0"){
+      setOndas1("ondas3");
+      } else {
+        setOndas1("ondas0");
+      }
+    }
 
     const onClosePress = () => {
        
@@ -228,6 +260,11 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
       var3numero={var3num}
       var4numero={var4num}
 
+      var1text={var1text}
+      var2text={var2text}
+      var3text={var3text}
+      var4text={var4text}
+
       desenvolvimento={desenvolvimento}
       menumodo={menumodo}
 
@@ -350,6 +387,11 @@ console.log("treinamento:: desenvolvimento", desenvolvimento)
 
     desenvolvimento={desenvolvimento}
     ondas={ondas}
+    ondas1={ondas1}
+    ondas0press={ondas0press}
+    ondas1press={ondas1press}
+    ondas2press={ondas2press}
+    ondas3press={ondas3press}
 
       />
     </View>
