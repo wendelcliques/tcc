@@ -18,6 +18,7 @@ import {
   import Drax from '../../components/Drax'
   import DraxTaxa from '../../components/DraxTaxa'
   import ExDraxOnda from '../../components/ExDraxOnda'
+import ExDraxTaxa from '../../components/ExDraxTaxa/indax';
 
 const Aventura = ({navigation}) => {
     const [received, setReceived] = useState([]);
@@ -40,11 +41,7 @@ const Aventura = ({navigation}) => {
 
 
     const onPlinha = () => {
-      if(received[1] == gabl1[1]) {
-        Alert.alert("Alinha está certa");
-      } else {
-        Alert.alert("Alinha está errada");
-      }
+      
       setLinha(linha => linha + 1);
       
     }
@@ -102,6 +99,10 @@ const onMenuCentralPress2 = () => {
           {ondas && (
         <ExDraxOnda />
         )}
+
+        {desenvolvimento && (
+          <ExDraxTaxa />
+        )}
         <DraxView
           style={[styles.centeredContent, styles.receivingZone, styles.magenta]}
           receivingStyle={styles.receiving}
@@ -132,24 +133,24 @@ const onMenuCentralPress2 = () => {
           onReceiveDragDrop={(event) => {
             
             if(linha === 1) {
-              //Alert.alert("Alinha está certa");
+          
             setReceived([
               ...received,
-              event.dragged.payload || '?',
+              event.dragged.payload || 'blue',
             ]);
             
-            if(received === gabl1) {
-              Alert.alert("Alinha está certa");
-            }
+          
           } else if (linha === 2) {
-            Alert.alert("Alinha está certa");
+            
             setStaged([
               ...staged,
               event.dragged.payload || '?',
             ]);
           } else if (linha === 3) {
-            Alert.alert("Alinha está certa");
-            setStaged1([
+           
+            setStaged1(
+              [
+              
               ...staged1,
               event.dragged.payload || '?',
             ]);
@@ -169,13 +170,13 @@ const onMenuCentralPress2 = () => {
 
             setStaged4([
               ...staged4,
-              event.dragged.payload || '?',
+              event.dragged.payload || 'blue',
             ]);
           }else if (linha === 7) {
 
             setStaged5([
               ...staged5,
-              event.dragged.payload || '?',
+              event.dragged.payload || 'blue',
             ]);
           }else if (linha === 8) {
 
@@ -222,36 +223,48 @@ const styles = StyleSheet.create({
       padding: 12,
       paddingTop: 5,
       //justifyContent: 'space-evenly',
+      //backgroundColor: 'blue',
     },
     centeredContent: {
       justifyContent: 'center',
       alignItems: 'center',
+     
     },
     receivingZone: {
       height: 310,
       borderRadius: 5,
+     
     },
     receiving: {
-      borderColor: 'red',
+      //borderColor: 'red',
       borderWidth: 2,
+     
     },
     incomingPayload: {
       marginTop: 10,
       fontSize: 24,
+      //backgroundColor: 'blue',
     },
     received: {
-      marginTop: 10,
+      //marginTop: 10,
       fontSize: 18,
+      //backgroundColor: 'blue',
+      borderColor: 'blue',
+      borderWidth: 2,
+
     },
     palette: {
       flexDirection: 'row',
       justifyContent: 'space-evenly',
+     
     },
     draggableBox: {
       width: 50,
       height: 20,
       borderRadius: 5,
+     
     },
+
     green: {
       backgroundColor: '#aaffaa',
     },
@@ -272,13 +285,16 @@ const styles = StyleSheet.create({
     },
     dragging: {
       opacity: 0.2,
+      
     },
     hoverDragging: {
       borderColor: 'magenta',
       borderWidth: 2,
+      
     },
     stagedCount: {
       fontSize: 18,
+      backgroundColor: "blue",
     },
   });
 export default Aventura

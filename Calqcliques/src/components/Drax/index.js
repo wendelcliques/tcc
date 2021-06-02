@@ -65,7 +65,10 @@ const Drax = () => {
         >
           <Text>cos(x²)</Text>
         </DraxView>
-        <DraxView
+        
+      </View>
+      <View style={styles.palette}>
+      <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
           draggingStyle={styles.dragging}
           dragReleasedStyle={styles.dragging}
@@ -75,8 +78,6 @@ const Drax = () => {
         >
           <Text>sen(u)</Text>
         </DraxView>
-      </View>
-      <View style={styles.palette}>
         <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.red]}
           draggingStyle={styles.dragging}
@@ -117,7 +118,10 @@ const Drax = () => {
         >
           <Text>cos(u)</Text>
         </DraxView>
-        <DraxView
+        
+      </View>
+      <View style={styles.palette}>
+      <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
           draggingStyle={styles.dragging}
           dragReleasedStyle={styles.dragging}
@@ -137,8 +141,6 @@ const Drax = () => {
         >
           <Text>Yellow</Text>
         </DraxView>
-      </View>
-      <View style={styles.palette}>
         <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.red]}
           draggingStyle={styles.dragging}
@@ -168,7 +170,10 @@ const Drax = () => {
           longPressDelay={0}
         >
           <Text>Blue</Text>
-        </DraxView>
+        </DraxView>  
+      </View>
+      <View style={styles.palette}>
+      
         <DraxView
           style={[styles.centeredContent, styles.draggableBox, styles.yellow]}
           draggingStyle={styles.dragging}
@@ -201,8 +206,7 @@ const Drax = () => {
         >
           <Text>Yellow</Text>
         </DraxView>
-        
-      </View>
+</View>
 </>
     )
 }
@@ -238,9 +242,12 @@ const styles = StyleSheet.create({
       justifyContent: 'space-evenly',
     },
     draggableBox: {
-      width: 50,
+      width: 70,
       height: 20,
       borderRadius: 5,
+      marginBottom: 5,
+      marginTop: 10,
+      marginLeft: 5,
     },
     green: {
       backgroundColor: '#aaffaa',

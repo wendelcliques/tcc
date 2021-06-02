@@ -265,6 +265,9 @@ const styles = StyleSheet.create({
       marginTop: 10,
       marginLeft: 5,
     },
+    dragPayload: {
+backgroundColor: 'blue',
+    },
     green: {
       backgroundColor: '#aaffaa',
     },
