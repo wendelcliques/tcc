@@ -32,7 +32,25 @@ const Aventura = ({navigation}) => {
     const [staged7, setStaged7] = useState([]);
     const [linha, setLinha] = useState(1);
 
-    const [gabl1, setGabl1] = useState(["G'(x) = ", "cos(x²)"]);
+    const [gabl1errado, setGabl1errado] = useState(["G'(x) = ", "cos(x²)"]);
+
+    const [gab1certo, setGab1certo] = useState(["u(x) = ", "x²"] || ["v(u) = ", "sen(u)"]);
+
+    const [gab2certo, setGab2certo] = useState(["v(u) = ", "sen(u)"] || ["v'(u) = ", "cos(u)"]);
+
+    const [gab3certo, setGab3certo] = useState(["u'(x) = ", "2x"] || ["u(x) = ", "x²"]);
+
+    const [gab4certo, setGab4certo] = useState(["v'(u) = ", "cos(u)"] || ["u'(x) = ", "2x"]);
+
+    const [gab5certo, setGab5certo] = useState(["2x", "cos(u)"]);
+    const [gab6certo, setGab6certo] = useState(["G'(x) = ", "2x", "cos(x²)"]);
+
+
+
+
+
+
+
 
     const [categoria, setCategoria] = useState("Bem vindo");
     const desenvolvimento = (categoria === "taxa de variação");
@@ -41,6 +59,8 @@ const Aventura = ({navigation}) => {
 
 
     const onPlinha = () => {
+
+
       
       setLinha(linha => linha + 1);
       
@@ -108,6 +128,10 @@ const onMenuCentralPress2 = () => {
 }
 
 
+
+
+
+
     return (
       <>
       <Menu 
@@ -141,7 +165,7 @@ const onMenuCentralPress2 = () => {
           <ExDraxTaxa />
         )}
         <DraxView
-          style={[styles.centeredContent, styles.receivingZone, styles.magenta]}
+          style={[ styles.receivingZone, styles.magenta]}
           receivingStyle={styles.receiving}
           renderContent={({ viewState }) => {
             const receivingDrag = viewState && viewState.receivingDrag;
@@ -152,7 +176,7 @@ const onMenuCentralPress2 = () => {
               <>
 
                 
-<View>
+<View style={[styles.incomingPayload, styles.centeredContent]}>
                 <Text style={styles.incomingPayload}>{payload || '-'}</Text>
                 </View>
 
@@ -318,7 +342,7 @@ const styles = StyleSheet.create({
       //backgroundColor: 'blue',
     },
     centeredContent: {
-      justifyContent: 'center',
+      //justifyContent: 'center',
       alignItems: 'center',
      
     },
