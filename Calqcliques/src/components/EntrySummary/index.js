@@ -525,6 +525,7 @@ console.log("grafico :: ymax", ymax);
             }
             ondas2press={ondas2press}
             ondas3press={ondas3press}
+            ondas1={ondas1}
             
             />
             )}

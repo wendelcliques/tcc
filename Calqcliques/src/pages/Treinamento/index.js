@@ -71,26 +71,23 @@ const [var1text, setVar1text] = useState(var1textc);
     }
 
     const ondas1press = () => {
-      if (ondas1 === "ondas0"){
+      
+      if (ondas1 === "ondas0" || ondas1 === "ondas2" || ondas1 === "ondas3" ){
       setOndas1("ondas1");
-      } else {
-        setOndas1("ondas0");
-      }
+      } 
     }
 
     const ondas2press = () => {
-      if (ondas1 === "ondas0"){
       setOndas1("ondas2");
-      } else {
-        setOndas1("ondas0");
-      }
+      if (ondas1 === "ondas0" || ondas1 === "ondas1" || ondas1 === "ondas3" ){
+      setOndas1("ondas2");
+      } 
     }
     const ondas3press = () => {
-      if (ondas1 === "ondas0"){
       setOndas1("ondas3");
-      } else {
-        setOndas1("ondas0");
-      }
+      if (ondas1 === "ondas0" || ondas1 === "ondas1" || ondas1 === "ondas2" ){
+      setOndas1("ondas3");
+      } 
     }
 
     const onClosePress = () => {

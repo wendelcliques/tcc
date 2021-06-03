@@ -1,3 +1,4 @@
+import { getFocusedRouteNameFromRoute } from '@react-navigation/core';
 import React, {useState} from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, } from 'react-native'
 
@@ -8,6 +9,7 @@ const EntrySummaryChart = ({data1, data2, data3, data4, data5, data6,
 ondas1press,
 ondas2press,
 ondas3press,
+ondas1,
 
 }) => {
     const [a, setA] = useState(4);
@@ -40,7 +42,12 @@ ondas3press,
             flexDirection: 'row',
             paddingLeft: 20,
         }}>
-<Text>2x cos x²</Text>
+<Text
+style={{
+    color: "green",
+}}
+
+>2x cos x²</Text>
 <TouchableOpacity
 onPress={() => {
     ondas0press && ondas0press();
@@ -52,8 +59,9 @@ onPress={() => {
             borderWidth: 1,
             borderRadius: 5,
             marginLeft: 20,
+            backgroundColor: ondas1 === "ondas0"? "rgba(99,80,00, 1.0)" : "rgba(80,80,80, 0.5)",
     }}
-            >Ativar</Text>
+            >{ondas1 === "ondas0" ? "Ativo" : "Ativar"}</Text>
 </TouchableOpacity>
             </View>
 
@@ -61,7 +69,10 @@ onPress={() => {
             flexDirection: 'row',
             paddingLeft: 20,
         }}>
-<Text>cos x²</Text>
+<Text
+style={{
+    color: "orange",
+}}>cos x²</Text>
 <TouchableOpacity
 onPress={() => {
     ondas1press && ondas1press();
@@ -73,8 +84,9 @@ onPress={() => {
             borderWidth: 1,
             borderRadius: 5,
             marginLeft: 20,
+            backgroundColor: ondas1 === "ondas1"? "rgba(99,80,00, 1.0)" : "rgba(80,80,80, 0.5)",
     }}
-            >Ativar</Text>
+            >{ondas1 === "ondas1" ? "Ativo" : "Ativar"}</Text>
 </TouchableOpacity>
             </View>
 
@@ -86,7 +98,10 @@ onPress={() => {
             flexDirection: 'row',
             paddingLeft: 20,
         }}>
-            <Text>cos x</Text>
+            <Text
+            style={{
+                color: "red",
+            }}>cos x</Text>
 <TouchableOpacity
 onPress={() => {
     ondas2press && ondas2press();
@@ -98,8 +113,9 @@ onPress={() => {
             borderWidth: 1,
             borderRadius: 5,
             marginLeft: 20,
+            backgroundColor: ondas1 === "ondas2"? "rgba(99,80,00, 1.0)" : "rgba(80,80,80, 0.5)",
     }}
-            >Ativar</Text>
+            >{ondas1 === "ondas2" ? "Ativo" : "Ativar"}</Text>
 </TouchableOpacity>
             </View>
 
@@ -107,7 +123,10 @@ onPress={() => {
             flexDirection: 'row',
             paddingLeft: 20,
         }}>
-            <Text>2x cos x</Text>
+            <Text
+            style={{
+                color: "blue",
+            }}>2x cos x</Text>
 <TouchableOpacity
 onPress={() => {
     ondas3press && ondas3press();
@@ -119,8 +138,9 @@ onPress={() => {
             borderWidth: 1,
             borderRadius: 5,
             marginLeft: 20,
+            backgroundColor: ondas1 === "ondas3"? "rgba(99,80,00, 1.0)" : "rgba(80,80,80, 0.5)",
     }}
-            >Ativar</Text>
+            >{ondas1 === "ondas3" ? "Ativo" : "Ativar"}</Text>
 </TouchableOpacity>
             </View>
 

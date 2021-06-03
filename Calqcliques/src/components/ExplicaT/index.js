@@ -23,6 +23,7 @@ const ExplicaT = ({categoria,
 
             onMenuCentralPress1={onMenuCentralPress1}
             onMenuCentralPress2={onMenuCentralPress2}
+            categoria={categoria}
             />
             <ExplicaList data={entries} />
         </View>

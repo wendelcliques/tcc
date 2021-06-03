@@ -5,6 +5,7 @@ const MenuCentral = ({
     onMenuCentralPress,
     onMenuCentralPress1,
     onMenuCentralPress2,
+    categoria,
 }) => {
     return (
         <View style={{
@@ -38,7 +39,7 @@ const MenuCentral = ({
             <Text style={{
                 fontSize:15,
                 color: "white", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                backgroundColor: categoria === "Bem vindo"? "rgba(99,80,00, 1.0)" : "rgba(80,80,80, 0.5)",
             }}>
                 Bem Vindo
              </Text>
@@ -64,7 +65,7 @@ marginHorizontal: 20,
             <Text style={{
                 fontSize:15,
                 color: "white", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                backgroundColor: categoria === "taxa de variação"? "rgba(99,80,00, 1.0)" : "rgba(80,80,80, 0.5)",
             }}>
                 Taxa de variação
              </Text>
@@ -89,7 +90,7 @@ marginHorizontal: 20,
             <Text style={{
                 fontSize:15,
                 color: "white", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                backgroundColor: categoria === "ondas"? "rgba(99,80,00, 1.0)" : "rgba(80,80,80, 0.5)",
             }}>
                 Ondas
              </Text>

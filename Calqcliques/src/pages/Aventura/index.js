@@ -61,14 +61,50 @@ let menumodo = "Modo Trinemento";
 
 const onMenuCentralPress = () => {
   setCategoria("Bem vindo");
+
+  setReceived([]);
+  setStaged([]);
+  setStaged1([]);
+  setStaged2([]);
+  setStaged3([]);
+  setStaged4([]);
+  setStaged5([]);
+  setStaged6([]);
+  setStaged7([]);
+  setLinha(1);
+
+
 }
 
 const onMenuCentralPress1 = () => {
   setCategoria("taxa de variação");
+
+  setReceived([]);
+  setStaged([]);
+  setStaged1([]);
+  setStaged2([]);
+  setStaged3([]);
+  setStaged4([]);
+  setStaged5([]);
+  setStaged6([]);
+  setStaged7([]);
+  setLinha(1);
+
 }
 
 const onMenuCentralPress2 = () => {
   setCategoria("ondas");
+
+  setReceived([]);
+  setStaged([]);
+  setStaged1([]);
+  setStaged2([]);
+  setStaged3([]);
+  setStaged4([]);
+  setStaged5([]);
+  setStaged6([]);
+  setStaged7([]);
+  setLinha(1);
 }
 
 
@@ -91,6 +127,7 @@ const onMenuCentralPress2 = () => {
 
             onMenuCentralPress1={onMenuCentralPress1}
             onMenuCentralPress2={onMenuCentralPress2}
+            categoria={categoria}
       />
 
         <DraxProvider>
@@ -115,18 +152,73 @@ const onMenuCentralPress2 = () => {
               <>
 
                 
-
+<View>
                 <Text style={styles.incomingPayload}>{payload || '-'}</Text>
+                </View>
+
+                <View style={
+  linha===1?
+  
+  styles.linha : ""}>
                 <Text style={styles.received}>{received.join(' ')}</Text>
+                </View>
+                <View style={
+  linha===2?
+  
+  styles.linha : ""}>
+
                 <Text style={styles.received}>{staged.join(' ')}</Text>
+                </View>
+
+
+<View style={
+  linha===3?
+  
+  styles.linha : ""}>
                 <Text style={styles.received}>{staged1.join(' ')}</Text>
+                </View>
+
+                <View style={
+  linha===4?
+  
+  styles.linha : ""}>
+
                 <Text style={styles.received}>{staged2.join(' ')}</Text>
+                </View>
+                <View style={
+  linha===5?
+  
+  styles.linha : ""}>
                 <Text style={styles.received}>{staged3.join(' ')}</Text>
+</View>
+
+<View style={
+  linha===6?
+  
+  styles.linha : ""}>
                 <Text style={styles.received}>{staged4.join(' ')}</Text>
+</View>
+
+<View style={
+  linha===7?
+  
+  styles.linha : ""}>
                 <Text style={styles.received}>{staged5.join(' ')}</Text>
+
+                </View>
+
+                <View style={
+  linha===8?
+  
+  styles.linha : ""}>
                 <Text style={styles.received}>{staged6.join(' ')}</Text>
+                </View>
+                <View style={
+  linha===9?
+  
+  styles.linha : ""}>
                 <Text style={styles.received}>{staged7.join(' ')}</Text>
-                
+                </View>
               </>
             );
           }}
@@ -249,8 +341,8 @@ const styles = StyleSheet.create({
       //marginTop: 10,
       fontSize: 18,
       //backgroundColor: 'blue',
-      borderColor: 'blue',
-      borderWidth: 2,
+     // borderColor: 'blue',
+     // borderWidth: 2,
 
     },
     palette: {
@@ -295,6 +387,11 @@ const styles = StyleSheet.create({
     stagedCount: {
       fontSize: 18,
       backgroundColor: "blue",
+    },
+    linha: {
+      borderColor: 'blue',
+      borderWidth: 2,
+     // backgroundColor: "blue",
     },
   });
 export default Aventura
