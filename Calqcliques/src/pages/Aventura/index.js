@@ -59,16 +59,74 @@ const Aventura = ({navigation}) => {
 
 
     const onPlinha = () => {
+      if (received[0] === undefined){
+       // Alert.alert("A linha está vazia");
+      }
+      if (linha === 1) {
+if (received[0] === "u(x) = " && received[1] === "x² "
+|| received[0] === "v(x) = " && received[1] === "sen(u)") {
+Alert.alert("está indo bem");
+}
+
+} else
 
 
+ 
+  
+  
+  if ( linha === 2) {
+  if ( received[0] === "u(x) = " && received[1] === "x² " &&    
+    staged[0] === "v(x) = "   && staged[1] === "sen(u)"
+  || received[0] === "v(x) = " && received[1] === "sen(u)" &&  
+  staged[0] === "u(x) = " 
+  && staged[1] === "x² ") {
+  Alert.alert("está indo bem");
+  }
+  
+  }
+
+  if ( linha === 3) {
+    if ( staged1[0] === "u'(x) = " 
+    && staged1[1] === "2x"
+    ) {
+    Alert.alert("está indo bem");
+    }
+    
+    }
+    if ( linha === 4) {
+      if ( staged2[0] === "v'(x) = " 
+      && staged2[1] === "cos(u)"
+      ) {
+      Alert.alert("está indo bem");
+      }
       
+      }
+      if ( linha === 5) {
+        if ( staged3[0] === "2x" 
+        && staged3[1] === "cos(u)"
+        ) {
+        Alert.alert("está indo bem");
+        }
+        
+        }
+        if ( linha === 6) {
+          if ( staged4[0] === "G'(x) = " 
+          && staged4[1] === "2x"
+          && staged4[2] === "cos(x²)"
+          ) {
+          Alert.alert("Parabéns, o exercício está correto");
+          }
+          
+          }
+  
       setLinha(linha => linha + 1);
       
     }
 
     console.log("Aventura :: linha", linha);
-    console.log("Aventura :: recieved", received);
-    console.log("Aventura :: gabl1", gabl1);
+    console.log("Aventura :: recieved", received[0]);
+    console.log("Aventura :: recieved", received[1]);
+   // console.log("Aventura :: gabl1", gabl1);
     console.log("Aventura :: staged", staged);
     console.log("Aventura :: staged1", staged1);
     console.log("Aventura :: staged2", staged2);
