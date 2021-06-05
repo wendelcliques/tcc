@@ -48,7 +48,7 @@ const EntryListItem = ({entry,
             <Text style={{
                 fontSize:15,
                 color: entry.termo1cor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {entry.termo1}
              </Text>
@@ -63,7 +63,7 @@ const EntryListItem = ({entry,
             <Text style={{
                 fontSize:15,
                 color: entry.termo2cor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo2} 
             </Text>
@@ -78,7 +78,7 @@ const EntryListItem = ({entry,
             <Text style={{
                  fontSize:15,
                  color: entry.termo3cor,
-                 backgroundColor: "rgba(80,80,80, 0.5)",
+                // backgroundColor: "rgba(80,80,80, 0.5)",
               
             }} >
                 {entry.termo3} 
@@ -94,7 +94,7 @@ const EntryListItem = ({entry,
             <Text style={{
                  fontSize:15,
                  color: entry.termo4cor,
-                 backgroundColor: "rgba(80,80,80, 0.5)",
+                // backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo4} 
             </Text>
@@ -108,7 +108,7 @@ const EntryListItem = ({entry,
             <Text style={{
                  fontSize:15,
                  color: entry.termo5cor,
-                 backgroundColor: "rgba(80,80,80, 0.5)",
+                 //backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo5} 
             </Text>
@@ -124,7 +124,7 @@ const EntryListItem = ({entry,
             <Text style={{
                  fontSize:15,
                  color: entry.termo6cor,
-                 backgroundColor: "rgba(80,80,80, 0.5)",
+                // backgroundColor: "rgba(80,80,80, 0.5)",
             }} >
                 {entry.termo6} 
             </Text>
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
       flexDirection: 'row',
-        //backgroundColor: Colors.red,
+        backgroundColor: Colors.blue,
         //backgroundColor: "rgba(80,80,80, 0.5)",
         marginTop: 0,
         marginBottom: -13,

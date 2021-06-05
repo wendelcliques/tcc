@@ -81,10 +81,25 @@ const TermoModal = ({termo1dd,
 
             <TouchableOpacity
             onPress={onCancel}>
-                <Text >sair </Text>
+                <Text > </Text>
             </TouchableOpacity>
         </View>
         </Container> 
+        <View style={{
+   flex:1,
+   //color: "green", //entries.termo1dcor,
+   //backgroundColor: "blue",
+}}>
+        <TouchableOpacity
+        style={{
+            flex:1,
+            //color: "green", //entries.termo1dcor,
+            //backgroundColor: "blue",
+         }}
+            onPress={onCancel}>
+                <Text ></Text>
+            </TouchableOpacity>
+            </View>
         </Modal>
      
     )
@@ -94,6 +109,10 @@ const styles = StyleSheet.create({
     modalItemText: {
         fontSize: 22,
         color: Colors.black,
+    },
+    botão: {
+        flex: 1,
+        backgroundColor: "blue",
     }
 })
 

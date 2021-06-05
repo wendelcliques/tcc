@@ -43,7 +43,7 @@ const Ondas = () => {
          <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
-               //backgroundColor: "rgba(80,80,80, 0.5)",
+               backgroundColor: Colors.blue,
             }}>
         <View>
             <TouchableOpacity
@@ -56,7 +56,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 G(x)=
              </Text>
@@ -81,7 +81,7 @@ const Ondas = () => {
                 
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 sen(
              </Text>
@@ -99,7 +99,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 x²
              </Text>
@@ -121,7 +121,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 )
              </Text>
@@ -137,6 +137,7 @@ const Ondas = () => {
              <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
                  <Text>
                      A função interna é:
@@ -149,6 +150,7 @@ const Ondas = () => {
 <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
         <View>
             <TouchableOpacity
@@ -161,7 +163,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 u(x)= 
              </Text>
@@ -180,7 +182,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 x²
              </Text>
@@ -199,6 +201,7 @@ const Ondas = () => {
              <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
                  <Text>
                      A função externa é:
@@ -210,6 +213,7 @@ const Ondas = () => {
              <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
         <View>
             <TouchableOpacity
@@ -222,7 +226,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 v(u)= 
              </Text>
@@ -241,7 +245,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 sen
              </Text>
@@ -260,7 +264,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 u
              </Text>
@@ -283,6 +287,7 @@ const Ondas = () => {
 <View style={{
   flexDirection: 'row', 
   paddingLeft: 10,
+  backgroundColor: Colors.blue,
 }}>
 <View>
 <TouchableOpacity
@@ -295,7 +300,7 @@ const Ondas = () => {
 <Text style={{
    fontSize:15,
    color: "black", //entries.termo1dcor,
-   backgroundColor: "rgba(80,80,80, 0.5)",
+   //backgroundColor: "rgba(80,80,80, 0.5)",
 }}>
    1º passo: 
 </Text>
@@ -317,7 +322,7 @@ const Ondas = () => {
     marginLeft: 5,
    fontSize:15,
    color: "black", //entries.termo1dcor,
-   backgroundColor: "rgba(80,80,80, 0.5)",
+   //backgroundColor: "rgba(80,80,80, 0.5)",
 }}>
    u'(x) =
 </Text>
@@ -336,7 +341,7 @@ const Ondas = () => {
 <Text style={{
    fontSize:15,
    color: "green", //entries.termo1dcor,
-   backgroundColor: "rgba(80,80,80, 0.5)",
+   //backgroundColor: Colors.blue,
 }}>
    2x
 </Text>
@@ -351,6 +356,7 @@ const Ondas = () => {
 <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
              <View>
             <TouchableOpacity
@@ -363,7 +369,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 2º passo: 
              </Text>
@@ -385,7 +391,7 @@ const Ondas = () => {
                 marginLeft: 5,
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 v'(u) =
              </Text>
@@ -404,7 +410,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 cos
              </Text>
@@ -423,7 +429,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 u
              </Text>
@@ -440,6 +446,7 @@ const Ondas = () => {
              <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
              <View>
             <TouchableOpacity
@@ -452,7 +459,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 3º passo: 
              </Text>
@@ -474,7 +481,7 @@ const Ondas = () => {
                 marginLeft: 5,
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 2x
              </Text>
@@ -493,7 +500,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 cos
              </Text>
@@ -512,7 +519,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 u
              </Text>
@@ -526,6 +533,7 @@ const Ondas = () => {
              <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
              <View>
             <TouchableOpacity
@@ -538,7 +546,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 4º passo: 
              </Text>
@@ -560,7 +568,7 @@ const Ondas = () => {
                 marginLeft: 5,
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 G'(x) =
              </Text>
@@ -579,7 +587,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 2x
              </Text>
@@ -598,7 +606,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 cos(
              </Text>
@@ -616,7 +624,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 x²
              </Text>
@@ -634,7 +642,7 @@ const Ondas = () => {
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 )
              </Text>

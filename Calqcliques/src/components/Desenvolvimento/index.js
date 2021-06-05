@@ -65,7 +65,7 @@ pmdas,
 <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
-               //backgroundColor: "rgba(80,80,80, 0.5)",
+               backgroundColor: Colors.blue,
             }}>
         <View>
             <TouchableOpacity
@@ -78,7 +78,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 v'(t)=
              </Text>
@@ -97,7 +97,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 2*
              </Text>
@@ -115,7 +115,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {var1numero}*
              </Text>
@@ -137,7 +137,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "orange", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {var2numero}*
              </Text>
@@ -158,7 +158,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "blue", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {var3numero}+
              </Text>
@@ -177,7 +177,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "red", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {var1numero}²*
              </Text>
@@ -195,7 +195,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "green", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {var4numero}
              </Text>
@@ -212,6 +212,7 @@ pmdas,
 <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
         <View>
             <TouchableOpacity
@@ -224,7 +225,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 v'(t)=
              </Text>
@@ -243,7 +244,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "brown", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+               // backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {arit1}+
              </Text>
@@ -261,7 +262,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "orange", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {arit2}
              </Text>
@@ -282,6 +283,7 @@ pmdas,
              <View style={{
                flexDirection: 'row', 
                paddingLeft: 10,
+               backgroundColor: Colors.blue,
             }}>
              <View>
             <TouchableOpacity
@@ -294,7 +296,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 v'(t)=
              </Text>
@@ -315,7 +317,7 @@ pmdas,
             <Text style={{
                 fontSize:15,
                 color: "black", //entries.termo1dcor,
-                backgroundColor: "rgba(80,80,80, 0.5)",
+                //backgroundColor: "rgba(80,80,80, 0.5)",
             }}>
                 {arit3} cm³/s
              </Text>
