@@ -23,13 +23,7 @@ const modo = (title === "Menu");
             {title && <Text style={styles.title}>{title}</Text>}
             </TouchableOpacity>
            
-{modo && (
-            <MenuModo 
-            onModoPress={onModoPress}
-            menumodo={menumodo}
-            
-            />
-            )}
+
             </View>
             {children}
             
@@ -63,3 +57,10 @@ flexDirection: 'row',
 })
 
 export default Container
+/*{modo && (
+    <MenuModo 
+    onModoPress={onModoPress}
+    menumodo={menumodo}
+    
+    />
+    )}*/
