@@ -92,7 +92,7 @@ const Ondas = () => {
             <TouchableOpacity
                onPress={() => {
                   // onEntryPress && onEntryPress();
-                   setTermo1d("x² é a função interna dessa função composta, pois é um x elevado ao quadrado, e a tabela de derivadas prevê a derivação de seno de x, não seno de x mais alguma cois, ou seno de x elevado a alguma coisa, ou qualquer outra coisa a mais aplicada em x.");
+                   setTermo1d("x² é a função interna dessa função composta, pois é um x elevado ao quadrado, e a tabela de derivadas prevê a derivação de seno de x, não seno de x mais alguma coisa, ou seno de x elevado a alguma coisa, ou qualquer outra coisa a mais aplicada em x.");
                    setModalVisible(true);
                }}
                >

@@ -30,13 +30,13 @@ const Treinamento = ({navigation}) => {
     var4num: 2,
 };*/
 
-    let var1textc =  "(r(t)): ";
+    let var1textc =  "(r(t)): 11 a 13";
     let var1numc =  12;
-    let var2textc = "(r'(t)): ";
+    let var2textc = "(r'(t)): -1 a 1";
     let var2numc = 1;
-    let var3textc = "(h(t)): ";
+    let var3textc = "(h(t)): 8 a 12";
    let var3numc = 10;
-    let var4textc = "(h'(t)): ";
+    let var4textc = "(h'(t)): -2 a 2";
     let var4numc = 2;
 
 
